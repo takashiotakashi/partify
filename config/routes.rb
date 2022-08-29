@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'events/resources'
+  get 'resources/events'
   devise_for :users
   root to: "pages#home"
   resources :places, only: %i[index show]
