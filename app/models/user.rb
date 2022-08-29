@@ -8,5 +8,9 @@ class User < ApplicationRecord
   validates :name, :address, :age, presence: true
 
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
+         :recoverable, :rememberable, :validatable,
+         :omniauthable, omniauth_providers: :spotify
+
+  has_one_attached :photo
+  # has_one :favorites, dependent: :destroy # caso implantemos favorites
 end
