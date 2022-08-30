@@ -24,6 +24,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_30_143949) do
     t.datetime "updated_at", null: false
     t.float "latitude"
     t.float "longitude"
+    t.date "date"
+    t.time "time"
     t.index ["genre_id"], name: "index_events_on_genre_id"
   end
 
@@ -50,6 +52,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_30_143949) do
     t.bigint "genre_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.date "date"
+    t.time "time"
     t.index ["genre_id"], name: "index_places_on_genre_id"
   end
 
