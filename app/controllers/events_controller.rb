@@ -1,6 +1,8 @@
 class EventsController < ApplicationController
   def index
     @events = Event.all
+    #@events = Event.where(genre: current_user.genre)
+    #@places = Place.where(city: "São Paulo")
   end
 
   def show
@@ -9,19 +11,6 @@ class EventsController < ApplicationController
 
   def new
     @event = Event.new
-  end
-
-  def scrape
-    busca = "rock"
-    url = "https://www.sympla.com.br/eventos/sao-paulo-sp?s=#{busca}&tab=eventos"
-
-    html_file = URI.open(url).read
-    html_doc = Nokogiri::HTML(html_file)
-
-    html_doc.search(".CustomGridstyle__CustomGridCardType").each do |element|
-      puts element.text.strip
-      puts element.attribute("href").value
-    end
   end
 
   private

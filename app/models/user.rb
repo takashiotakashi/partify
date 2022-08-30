@@ -5,7 +5,7 @@ class User < ApplicationRecord
   has_many :genres, through: :music_tastes
   has_many :reviews, dependent: :destroy
 
-  validates :name, :address, :age, presence: true
+  validates :address, presence: true, on: :update
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,
