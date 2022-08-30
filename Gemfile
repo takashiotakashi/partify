@@ -18,6 +18,10 @@ gem "puma", "~> 5.0"
 # Bundle and transpile JavaScript [https://github.com/rails/jsbundling-rails]
 gem "jsbundling-rails"
 
+gem 'kimurai'
+
+gem 'nokogiri'
+
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "turbo-rails"
 
@@ -47,6 +51,10 @@ gem "sassc-rails"
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
+# gem 'rspotify'
+gem 'omniauth-spotify'
+# gem 'omniauth'
+gem "omniauth-rails_csrf_protection"
 gem "geocoder"
 gem "devise"
 gem "autoprefixer-rails"
