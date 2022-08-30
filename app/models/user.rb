@@ -1,6 +1,8 @@
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  # after_create : #método para importar gosto musical
+
   has_many :music_tastes
   has_many :genres, through: :music_tastes
   has_many :reviews, dependent: :destroy
