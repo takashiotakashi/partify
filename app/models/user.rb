@@ -13,6 +13,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable,
          :omniauthable, omniauth_providers: [:spotify]
 
+  after_create :grab_genres
+
   # has_one_attached :photo
   # has_one :favorites, dependent: :destroy # caso implantemos favorites
 
@@ -44,5 +46,24 @@ class User < ApplicationRecord
     end
 
     return user
+  end
+
+  private
+
+  def grab_genres
+    url = "https://api.spotify.com/v1/me/top/artists"
+    user_serialized = URI.open(url, "Authorization" => "Bearer #{user.token}", "Content-Type" => "application/json").read
+    parsed = JSON.parse(user_serialized)
+
+    spotify_genres = []
+
+    parsed["items"].each do |artist|
+      artist["genres"].each do |genre|
+        spotify_genres << genre unless spotify_genres.include?(genre)
+      end
+    end
+
+    user.genres = spotify_genres
+    # puts spotify_genres
   end
 end
