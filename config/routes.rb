@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   root to: "events#index"
   resources :events, only: %i[index show]
   resources :profiles, only: %i[new create]
+  get "home", to: "pages#home"
 
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
