@@ -22,7 +22,7 @@ class EventsController < ApplicationController
 
   private
 
-  def set_place
+  def set_event
     @event = Event.find(params[:id])
   end
 
