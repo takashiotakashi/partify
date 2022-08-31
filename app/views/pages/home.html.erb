@@ -1,14 +1,13 @@
-<div class="container-home" style="height: 100vh;">
-  <div id="background-home" style="height: 100vh;">
+<div class="background-home">
+  <div class="container-home">
+    <div class="oi">
+    <%= image_tag "logo-home.png", class: "img-home" %>
+    </div>
     <div class="name-button">
-      <h1>Partify</h1>
-      <p>Connect your Spotify</p>
-      <%= button_to "#", class: "btn btn-outline" do %>
-        <i class="fab fa-spotify"></i><%= link_to 'Sign in with Spotify', user_spotify_omniauth_authorize_path, method: :post %>
-      <% end %>
-
-      <div id="text">
-        <p class="mt-1">
-      </div>
+      <h1>We recommend places that you'll love based on what you listen to on Spotify.</h1>
+      <%= image_tag "Group 17.png", class: "spt" %>
+      <%# <%= button_to "#", class: "btn btn-outline" do > %>
+        <%# <i class="fab fa-spotify"></i><%= link_to 'Sign in with Spotify', user_spotify_omniauth_authorize_path, method: :post > %>
+      <%# <% end > %>
     </div>
   </div>
