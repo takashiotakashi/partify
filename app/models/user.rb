@@ -3,11 +3,9 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   # after_create : #método para importar gosto musical
 
-  has_many :music_tastes
-  has_many :genres, through: :music_tastes
   has_many :reviews, dependent: :destroy
 
-  validates :address, presence: true, on: :update
+  # validates :address, presence: true, on: :update Por que obrigar a colocar endereço?
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,
