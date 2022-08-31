@@ -8,9 +8,16 @@
 require "open-uri"
 require "nokogiri"
 
+puts "Cleaning database..."
+Event.destroy_all
+User.destroy_all
+Genre.destroy_all
+
+puts "Creating database..."
+
 rock = Genre.create!(name: "rock")
 Genre.create!(name: "funk")
-Genre.create!(name: "eletronica")
+Genre.create!(name: "electronica")
 Genre.create!(name: "pop")
 Genre.create!(name: "sertanejo")
 Genre.create!(name: "reggaeton")
@@ -31,4 +38,5 @@ end
   #element.at("img")['src']
 
 
-  Event.create!(name: , address: , description: , price: , genre_id: )
+Event.create!(name: "D-Edge Club", address: "Av. Mario deAndrade, 141, São Paulo - SP", description: "A razão de ser de todo clube é proporcionar a seus frequentadores a oportunidade de celebrarem todas as alegrias da vida de uma maneira muito especial. Dançar é sem dúvida alguma uma das formas mais elementares e seminais de expressarmos nossa felicidade e é ainda melhor quando podemos fazer isto entre nossos pares, ao som de boa música. Naturalmente, a recepção de estímulos sonoros pelo nosso corpo é essencial para isso e o D.EDGE sempre apostou em prover as melhores condições para tornar isso possível.", genre_id: 3)
+Event.create!(name: "Morrison Rock Bar", address: "Rua Inácio Pereira da Rocha, 362, São Paulo - SP", description: "O bar é um dos mais tradicionais entre as casas de rock em São Paulo. As bandas cover que passam pela programação são um dos grandes diferenciais para o público. No palco, hits dos anos 70, 80, 90 e shows especiais com canções de ídolos do movimento. Com dois andares, o segundo costuma ser mais tranquilo - lá dá pra beber e comer sem se importar com empurra-empurra.", genre_id: 1)
