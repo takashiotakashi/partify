@@ -66,6 +66,8 @@ class User < ApplicationRecord
         spotify_genres << genre.split
       end
     end
-    user.fav_genre = spotify_genres.flatten.select_top_occurrence
+    genre_instance = Genre.where(name: spotify_genres.flatten.select_top_occurrence)
+    user.fav_genre_id = genre_instance[0].id
+
   end
 end
