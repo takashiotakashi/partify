@@ -50,20 +50,22 @@ class User < ApplicationRecord
 
   private
 
+  def select_top_occurrence
+    sort_by {|i| grep(i).length }.last
+  end
+
   def grab_genres
     url = "https://api.spotify.com/v1/me/top/artists"
     user_serialized = URI.open(url, "Authorization" => "Bearer #{user.token}", "Content-Type" => "application/json").read
     parsed = JSON.parse(user_serialized)
 
     spotify_genres = []
-
     parsed["items"].each do |artist|
       artist["genres"].each do |genre|
-        spotify_genres << genre unless spotify_genres.include?(genre)
+        # spotify_genres << genre unless spotify_genres.include?(genre)
+        spotify_genres << genre.split
       end
     end
-
-    user.genres = spotify_genres
-    # puts spotify_genres
+    user.fav_genre = spotify_genres.flatten.select_top_occurrence
   end
 end
