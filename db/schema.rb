@@ -22,10 +22,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_31_165935) do
     t.bigint "genre_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.float "latitude"
-    t.float "longitude"
     t.date "date"
     t.time "time"
+    t.float "latitude"
+    t.float "longitude"
     t.string "Image"
     t.index ["genre_id"], name: "index_events_on_genre_id"
   end
@@ -34,15 +34,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_31_165935) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "music_tastes", force: :cascade do |t|
-    t.bigint "user_id", null: false
-    t.bigint "genre_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["genre_id"], name: "index_music_tastes_on_genre_id"
-    t.index ["user_id"], name: "index_music_tastes_on_user_id"
   end
 
   create_table "places", force: :cascade do |t|
@@ -92,8 +83,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_31_165935) do
   end
 
   add_foreign_key "events", "genres"
-  add_foreign_key "music_tastes", "genres"
-  add_foreign_key "music_tastes", "users"
   add_foreign_key "places", "genres"
   add_foreign_key "reviews", "places"
   add_foreign_key "reviews", "users"
