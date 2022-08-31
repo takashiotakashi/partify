@@ -10,7 +10,7 @@ require "nokogiri"
 
 Genre.create!(name: "rock")
 Genre.create!(name: "funk")
-Genre.create!(name: "eletronic")
+Genre.create!(name: "electronica")
 Genre.create!(name: "pop")
 Genre.create!(name: "sertanejo")
 Genre.create!(name: "reggaeton")

@@ -70,7 +70,9 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_31_192609) do
     t.string "picture_url"
     t.string "token"
     t.datetime "token_expiry"
+    t.bigint "fav_genre_id"
     t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["fav_genre_id"], name: "index_users_on_fav_genre_id"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
@@ -78,4 +80,5 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_31_192609) do
   add_foreign_key "music_tastes", "genres"
   add_foreign_key "music_tastes", "users"
   add_foreign_key "reviews", "users"
+  add_foreign_key "users", "genres", column: "fav_genre_id"
 end

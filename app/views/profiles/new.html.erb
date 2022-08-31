@@ -3,6 +3,7 @@
 
 <%= simple_form_for @profile, url: profiles_path, method: :post, data: { turbo: :false } do |f| %>
 
+<%= request.location.city %>
 <%= f.input :address %>
 <%= f.submit 'Search locals', class: 'btn btn-primary btn-block' %>
 

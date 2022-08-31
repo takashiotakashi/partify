@@ -1,6 +1,7 @@
 class EventsController < ApplicationController
   def index
     @events = Event.all
+    # The `geocoded` scope filters only events with coordinates
     @markers = @events.geocoded.map do |event|
       {
         lat: event.latitude,
