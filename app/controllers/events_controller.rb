@@ -1,15 +1,14 @@
 class EventsController < ApplicationController
   def index
     @events = Event.all
-    # The `geocoded` scope filters only events with coordinates
-    @markers = @event.geocoded.map do |event|
+    @markers = @events.geocoded.map do |event|
       {
         lat: event.latitude,
-        lng: event.longitude
+        lng: event.longitude,
+        info_window: render_to_string(partial: "info_window", locals: {event: event}),
+        image_url: helpers.asset_url("REPLACE_THIS_WITH_YOUR_IMAGE_IN_ASSETS")
       }
     end
-    #@events = Event.where(genre: current_user.genre)
-    #@places = Place.where(city: "São Paulo")
   end
 
   def show
