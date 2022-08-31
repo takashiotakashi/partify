@@ -4,7 +4,7 @@ class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   # after_create : #método para importar gosto musical
-
+  
   has_many :reviews, dependent: :destroy
   belongs_to :fav_genre, class_name: 'Genre', optional: true
 
@@ -51,14 +51,10 @@ class User < ApplicationRecord
 
   private
 
-  # def select_top_occurrence
-  #   sort_by { |i| grep(i).length }.last
-  # end
-
   def grab_genres
 
     url = "https://api.spotify.com/v1/me/top/artists"
-    user_serialized = URI.open(url, "Authorization" => "Bearer #{User.last.token}", "Content-Type" => "application/json").read # mudar user!
+    user_serialized = URI.open(url, "Authorization" => "Bearer #{self.token}", "Content-Type" => "application/json").read
     parsed = JSON.parse(user_serialized)
 
     spotify_genres = []
@@ -67,7 +63,7 @@ class User < ApplicationRecord
         spotify_genres << genre.split # considerar manter nomes compostos, se criarmos filtro adequado para escopo etc
       end
     end
-    top_genre = spotify_genres.flatten.tally.max_by{ |k,v| v}.first
+    top_genre = spotify_genres.flatten.tally.max_by { |_k, v| v }.first
 
     genre = Genre.find_by(name: top_genre)
 
