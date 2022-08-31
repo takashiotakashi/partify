@@ -22,12 +22,11 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_29_200759) do
     t.bigint "genre_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.float "latitude"
-    t.float "longitude"
     t.date "date"
     t.time "time"
     t.float "latitude"
     t.float "longitude"
+    t.string "Image"
     t.index ["genre_id"], name: "index_events_on_genre_id"
   end
 
