@@ -48,5 +48,15 @@ export default class extends Controller {
         .setPopup(popup)
         .addTo(this.map)
     })
+
+    navigator.geolocation.getCurrentPosition(
+      function(pos) {
+          pos.coords.latitude;
+          pos.coords.longitude;
+          pos.coords.accuracy;
+      },
+      function(error) {
+          error.code;
+      });
   }
 }
