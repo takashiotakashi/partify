@@ -1,0 +1,16 @@
+<div class='card-trip'>
+
+  <h1><%= @event.name %></h1>
+  <div><%= @event.date %></div>
+
+  <div class='card-description'>
+  <%= @event.description %></div>
+
+
+  <div class='card-address'> <%= @event.address %> </div>
+
+</div>
+
+<div><%= link_to "Tickets", events_path, class: "btn btn-primary d-flex justify-content-center" %></div>
+
+<div><%= link_to "Back to Events", events_path, class: "btn btn-secondary d-flex justify-content-center" %></div>
