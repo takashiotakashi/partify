@@ -15,10 +15,9 @@ class User < ApplicationRecord
   # has_one :favorites, dependent: :destroy # caso implantemos favorites
 
   def self.find_for_oauth(auth)
-    puts auth
     # Create the user params
     user_params = auth.slice("provider", "uid")
-    user_params.merge! auth.info.slice("email", "first_name", "last_name")
+    user_params.merge! auth.info.slice("email", "name")
     user_params[:picture_url] = auth.info.image
     user_params[:token] = auth.credentials.token
     user_params[:token_expiry] = Time.at(auth.credentials.expires_at)

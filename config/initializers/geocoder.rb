@@ -1,5 +1,4 @@
 Geocoder.configure(
-  units: :km,
   # Geocoding options
   # timeout: 3,                 # geocoding service timeout (secs)
   # lookup: :nominatim,         # name of geocoding service (symbol)
@@ -19,6 +18,7 @@ Geocoder.configure(
   # Calculation options
   # units: :mi,                 # :km for kilometers or :mi for miles
   # distances: :linear          # :spherical or :linear
+  units: :km,
 
   # Cache configuration
   # cache_options: {
