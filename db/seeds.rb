@@ -10,7 +10,7 @@ require "nokogiri"
 
 rock = Genre.create!(name: "rock")
 Genre.create!(name: "funk")
-Genre.create!(name: "eletronic")
+Genre.create!(name: "eletronica")
 Genre.create!(name: "pop")
 Genre.create!(name: "sertanejo")
 Genre.create!(name: "reggaeton")
@@ -29,3 +29,6 @@ end
   puts "#{Event.count} events created"
   #element.attribute("href").value
   #element.at("img")['src']
+
+
+  Event.create!(name: , address: , description: , price: , genre_id: )
