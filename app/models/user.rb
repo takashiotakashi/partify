@@ -1,9 +1,12 @@
+require 'open-uri'
+
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   # after_create : #método para importar gosto musical
 
   has_many :reviews, dependent: :destroy
+  belongs_to :fav_genre, class_name: 'Genre', optional: true
 
   # validates :address, presence: true, on: :update Por que obrigar a colocar endereço?
 
@@ -48,24 +51,27 @@ class User < ApplicationRecord
 
   private
 
-  def select_top_occurrence
-    sort_by {|i| grep(i).length }.last
-  end
+  # def select_top_occurrence
+  #   sort_by { |i| grep(i).length }.last
+  # end
 
   def grab_genres
+
     url = "https://api.spotify.com/v1/me/top/artists"
-    user_serialized = URI.open(url, "Authorization" => "Bearer #{user.token}", "Content-Type" => "application/json").read
+    user_serialized = URI.open(url, "Authorization" => "Bearer #{User.last.token}", "Content-Type" => "application/json").read # mudar user!
     parsed = JSON.parse(user_serialized)
 
     spotify_genres = []
     parsed["items"].each do |artist|
       artist["genres"].each do |genre|
-        # spotify_genres << genre unless spotify_genres.include?(genre)
-        spotify_genres << genre.split
+        spotify_genres << genre.split # considerar manter nomes compostos, se criarmos filtro adequado para escopo etc
       end
     end
-    genre_instance = Genre.where(name: spotify_genres.flatten.select_top_occurrence)
-    user.fav_genre_id = genre_instance[0].id
+    top_genre = spotify_genres.flatten.tally.max_by{ |k,v| v}.first
 
+    genre = Genre.find_by(name: top_genre)
+
+    self.fav_genre = genre if genre
+    self.save!
   end
 end
