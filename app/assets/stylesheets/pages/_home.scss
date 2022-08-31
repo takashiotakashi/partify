@@ -1,4 +1,16 @@
 // Specific CSS for your home-page
+.home-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.home-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  padding: 15px;
+  flex-grow: 1;
+}
 
 .background-home {
   background-image: image-url("partify-home.jpg");
