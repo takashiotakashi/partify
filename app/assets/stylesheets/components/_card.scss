@@ -4,6 +4,11 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
+#event-show-image {
+  width: 100%;
+}
+
+
 .card-description {
   margin: 10px 10px 10px 10px;
 }
@@ -11,6 +16,6 @@
 
 h1 h3 {
   font-family: Rubik;
-  display: flex;
+display: flex;
   justify-content: center;
 }
