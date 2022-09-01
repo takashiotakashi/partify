@@ -49,14 +49,19 @@ export default class extends Controller {
         .addTo(this.map)
     })
 
-    navigator.geolocation.getCurrentPosition(
-      function(pos) {
-          pos.coords.latitude;
-          pos.coords.longitude;
-          pos.coords.accuracy;
-      },
-      function(error) {
-          error.code;
-      });
+    function success(pos) {
+      var crd = pos.coords;
+
+      console.log('Sua posição atual é:');
+      console.log('Latitude : ' + crd.latitude);
+      console.log('Longitude: ' + crd.longitude);
+      console.log('Mais ou menos ' + crd.accuracy + ' metros.');
+    };
+
+    function error(err) {
+      console.warn('ERROR(' + err.code + '): ' + err.message);
+    };
+    
+    navigator.geolocation.getCurrentPosition(success, error);
   }
 }
