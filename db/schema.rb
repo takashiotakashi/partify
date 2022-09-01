@@ -37,15 +37,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_01_171743) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "music_tastes", force: :cascade do |t|
-    t.bigint "user_id", null: false
-    t.bigint "genre_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["genre_id"], name: "index_music_tastes_on_genre_id"
-    t.index ["user_id"], name: "index_music_tastes_on_user_id"
-  end
-
   create_table "reviews", force: :cascade do |t|
     t.string "title"
     t.float "rating"
@@ -78,8 +69,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_01_171743) do
   end
 
   add_foreign_key "events", "genres"
-  add_foreign_key "music_tastes", "genres"
-  add_foreign_key "music_tastes", "users"
   add_foreign_key "reviews", "users"
   add_foreign_key "users", "genres", column: "fav_genre_id"
 end
