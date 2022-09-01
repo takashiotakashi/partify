@@ -273,14 +273,14 @@ Devise.setup do |config|
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
 
-  config.omniauth :spotify, ENV['SPOTIFY_ID'], ENV['SPOTIFY_PWD'], scope: %w(
+  config.omniauth :spotify, ENV['SPOTIFY_ID'], ENV['SPOTIFY_PWD'], scope: %w[
     playlist-read-private
     user-read-private
     user-read-email
     user-top-read
     user-follow-read
     user-library-read
-  ).join(' ')
+  ].join(' ')
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or

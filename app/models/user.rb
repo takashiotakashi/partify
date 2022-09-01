@@ -7,7 +7,7 @@ class User < ApplicationRecord
   has_many :reviews, dependent: :destroy
   belongs_to :fav_genre, class_name: 'Genre', optional: true
 
-  # validates :address, presence: true, on: :update # tá quebrandoo código
+  #validates :address, presence: true, on: :update # Por que obrigar a colocar endereço?
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,
@@ -48,25 +48,24 @@ class User < ApplicationRecord
     return user
   end
 
-  #private
+  private
 
-#def grab_genres
+  def grab_genres
 
-##url = "https://api.spotify.com/v1/me/top/artists"
-##user_serialized = URI.open(url, "Authorization" => "Bearer #{self.token}", "Content-Type" => "application/json").read
-##parsed = JSON.parse(user_serialized)
+    url = "https://api.spotify.com/v1/me/top/artists"
+    user_serialized = URI.open(url, "Authorization" => "Bearer #{self.token}", "Content-Type" => "application/json").read
+    parsed = JSON.parse(user_serialized)
+    spotify_genres = []
+    parsed["items"].each do |artist|
+      artist["genres"].each do |genre|
+        spotify_genres << genre.split # considerar manter nomes compostos, se criarmos filtro adequado para escopo etc
+      end
+    end
+    top_genre = spotify_genres.flatten.tally.max_by { |_k, v| v }.first
 
-##spotify_genres = []
-##parsed["items"].each do |artist|
-###artist["genres"].each do |genre|
-#spotify_genres << genre.split # considerar manter nomes compostos, se criarmos filtro adequado para escopo etc
-#end
-#end
-#top_genre = spotify_genres.flatten.tally.max_by { |_k, v| v }.first
+    genre = Genre.find_by(name: top_genre)
 
-#genre = Genre.find_by(name: top_genre)
-
-#self.fav_genre = genre if genre
-#self.save!
-#end
+    self.fav_genre = genre if genre
+    self.save!
+  end
 end
