@@ -1,6 +1,6 @@
 .card-trip {
   overflow: hidden;
-  background: white;
+  background: rgba(185, 185, 185, 0.75);
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
@@ -8,14 +8,20 @@
   width: 100%;
 }
 
-
-.card-description {
-  margin: 10px 10px 10px 10px;
+#info-show {
+  margin: 10px;
+  text-align: center;
 }
 
+#description-head {
+  text-align: center;
+  margin-top: 10px;
+}
 
-h1 h3 {
-  font-family: Rubik;
-display: flex;
-  justify-content: center;
+#description-body {
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 10px;
+  margin-bottom: 20px;
+  padding: 15px;
+  text-align: justify;
 }
