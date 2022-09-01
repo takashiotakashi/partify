@@ -35,7 +35,7 @@ Genre.all.each do |genre|
     html_file2 = URI.open(href).read
     html_doc2 = Nokogiri::HTML(html_file2)
     event.description = html_doc2.search('.eIGwZb').text
-    event.address = html_doc2.search('.hfvuBe').text.strip
+    event.address = html_doc2.search('.cEMGkg').text.strip
     event.save!
   end
 end
