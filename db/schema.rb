@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_08_31_165935) do
+ActiveRecord::Schema[7.0].define(version: 2022_08_31_192609) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -22,11 +22,11 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_31_165935) do
     t.bigint "genre_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.date "date"
+    t.string "date"
     t.time "time"
     t.float "latitude"
     t.float "longitude"
-    t.string "Image"
+    t.string "image"
     t.index ["genre_id"], name: "index_events_on_genre_id"
   end
 
@@ -53,19 +53,16 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_31_165935) do
     t.bigint "genre_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.date "date"
-    t.time "time"
-    t.index ["genre_id"], name: "index_places_on_genre_id"
+    t.index ["genre_id"], name: "index_music_tastes_on_genre_id"
+    t.index ["user_id"], name: "index_music_tastes_on_user_id"
   end
 
   create_table "reviews", force: :cascade do |t|
     t.string "title"
     t.float "rating"
-    t.bigint "place_id", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["place_id"], name: "index_reviews_on_place_id"
     t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 

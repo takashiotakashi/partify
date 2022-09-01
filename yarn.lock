@@ -86,55 +86,6 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
-"@mapbox/fusspot@^0.4.0":
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/@mapbox/fusspot/-/fusspot-0.4.0.tgz#5ac625b5ed31695fda465fb0413ee0379bdf553c"
-  integrity sha512-6sys1vUlhNCqMvJOqPEPSi0jc9tg7aJ//oG1A16H3PXoIt9whtNngD7UzBHUVTH15zunR/vRvMtGNVsogm1KzA==
-  dependencies:
-    is-plain-obj "^1.1.0"
-    xtend "^4.0.1"
-
-"@mapbox/mapbox-gl-geocoder@^5.0.1":
-  version "5.0.1"
-  resolved "https://registry.yarnpkg.com/@mapbox/mapbox-gl-geocoder/-/mapbox-gl-geocoder-5.0.1.tgz#3db39280175872bfd94884275c5ee528bdff35e0"
-  integrity sha512-/OUL42eh4OBaIerhcwCpa27oD+u4a2xN8V7vEdsglwd8lCplFAxJCdwT9Kprli1TH5mTYsXyONmh03FwoWBWfA==
-  dependencies:
-    "@mapbox/mapbox-sdk" "^0.13.3"
-    events "^3.3.0"
-    lodash.debounce "^4.0.6"
-    nanoid "^3.1.31"
-    subtag "^0.5.0"
-    suggestions "^1.6.0"
-    xtend "^4.0.1"
-
-"@mapbox/mapbox-sdk@^0.13.3":
-  version "0.13.4"
-  resolved "https://registry.yarnpkg.com/@mapbox/mapbox-sdk/-/mapbox-sdk-0.13.4.tgz#0d3292f325355a520babdc390a348103695d2f12"
-  integrity sha512-8ecFC+eWLe0/6FKQuhhSs5cFgvvc07In2r9KdY3h8tP9weH0Fzh7B5Zjj8fUFzAHi8pFQ5KguEYfqrnPJN/PdQ==
-  dependencies:
-    "@mapbox/fusspot" "^0.4.0"
-    "@mapbox/parse-mapbox-token" "^0.2.0"
-    "@mapbox/polyline" "^1.0.0"
-    eventemitter3 "^3.1.0"
-    form-data "^3.0.0"
-    got "^10.7.0"
-    is-plain-obj "^1.1.0"
-    xtend "^4.0.1"
-
-"@mapbox/parse-mapbox-token@^0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@mapbox/parse-mapbox-token/-/parse-mapbox-token-0.2.0.tgz#34049d948868376f689189a5ea0e3cd2d9284b91"
-  integrity sha512-BjeuG4sodYaoTygwXIuAWlZV6zUv4ZriYAQhXikzx+7DChycMUQ9g85E79Htat+AsBg+nStFALehlOhClYm5cQ==
-  dependencies:
-    base-64 "^0.1.0"
-
-"@mapbox/polyline@^1.0.0":
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/@mapbox/polyline/-/polyline-1.1.1.tgz#ab96e5e6936f4847a4894e14558daf43e40e3bd2"
-  integrity sha512-z9Sl7NYzsEIrAza658H92mc0OvpBjQwjp7Snv4xREKhsCMat7m1IKdWJMjQ5opiPYa0veMf7kCaSd1yx55AhmQ==
-  dependencies:
-    meow "^6.1.1"
-
 "@popperjs/core@^2.11.6":
   version "2.11.6"
   resolved "https://registry.npmjs.org/@popperjs/core/-/core-2.11.6.tgz"

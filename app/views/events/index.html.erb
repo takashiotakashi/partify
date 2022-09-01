@@ -1,16 +1,30 @@
-<div class="home-container">
 
-  <div class='home-grid'>
-    <% @events.each do |event| %>
-      <p><%= event.name %> <%= event.address %></p>
-
-    <% end %>
-  </div>
-
-</div>
-
-
-<div style="width: 100%; height: 600px;"
+<div class="events-map"
   data-controller="map"
   data-map-markers-value="<%= @markers.to_json %>"
-  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+</div>
+
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+      <% @events.each_with_index do |event, index| %>
+      <div class="carousel-item <%='active' if index.zero?%>">
+        <div class="d-flex flex-column">
+          <%= link_to event_path(event) do %>
+            <%= image_tag "#{event.image}", class: "w-100" %>
+          <% end %>
+          <h5><%= event.name %></h5>
+          <h6><%= event.date %></h6>
+        </div>
+      </div>
+      <% end %>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
