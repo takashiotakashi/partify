@@ -2,13 +2,11 @@
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  .event-show-image {
-    top: 0px;
-    height: 100vh;
-    width: 400px;
-  }
 }
 
+#event-show-image {
+  width: 100%;
+}
 
 
 .card-description {
