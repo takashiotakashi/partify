@@ -28,7 +28,8 @@ Genre.all.each do |genre|
     event = Event.new(name: element.search("h3").text.strip,
                       date: element.search(".sc-1sp59be-1").text.strip,
                       image: element.at("img")['src'],
-                      genre: genre)
+                      genre: genre,
+                      link: element.attribute("href").value)
 
     href = element.attribute("href").value
 
