@@ -7,9 +7,9 @@
 #   Character.create(name: "Luke", movie: movies.first)
 # require "open-uri"
 # require "nokogiri"
+
 puts "Cleaning db..."
 Event.destroy_all
-User.destroy_all
 Genre.destroy_all
 puts "Db cleaned..."
 puts "Creating genres..."
@@ -43,9 +43,12 @@ Genre.all.each do |genre|
 
     html_file2 = URI.open(href).read
     html_doc2 = Nokogiri::HTML(html_file2)
-    event.description = html_doc2.search('.eIGwZb').text.strip
-    event.address = html_doc2.search('.cEMGkg').text.strip
-    event.save!
+    event.description = html_doc2.search('.eIGwZb').text
+    address = html_doc2.search('.cEMGkg')[0]
+    if address
+      event.address = address.text
+      event.save!
+    end
   end
   puts "#{genre} Event created"
 end

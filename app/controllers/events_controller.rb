@@ -1,15 +1,16 @@
 class EventsController < ApplicationController
   def index
-    @events = Event.all
-    # The `geocoded` scope filters only events with coordinates
-    @markers = @events.geocoded.map do |event|
-      {
-        lat: event.latitude,
-        lng: event.longitude
-      }
+    # @events = Event.all
+    @events = Event.where(genre_id: current_user.fav_genre_id)
+    @events = @events.near([params[:lat], params[:lng]], 100) if params[:lat].present? && params[:lng].present?
+    if @events.present?
+      @markers = @events.geocoded.map do |event|
+        {
+          lat: event.latitude,
+          lng: event.longitude
+        }
+      end
     end
-    #@events = Event.where(genre: current_user.genre)
-    #@places = Place.where(city: "São Paulo")
   end
 
   def show
