@@ -3,7 +3,8 @@ require 'open-uri'
 class User < ApplicationRecord
 # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
-  Dotenv.load # is this safe?
+  # Dotenv.load # is this safe?
+
   has_many :reviews, dependent: :destroy
   belongs_to :fav_genre, class_name: 'Genre', optional: true
 
