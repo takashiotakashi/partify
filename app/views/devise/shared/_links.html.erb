@@ -1,25 +1,19 @@
-<%- if controller_name != 'sessions' %>
-  <%= link_to "Log in", new_session_path(resource_name) %><br />
-<% end %>
+<div class="background-home">
+  <div class="container-home">
+    <div class="oi">
+      <%= image_tag "logo-home.png", class: "img-home" %>
+    </div>
+    <div class="name-button">
+      <h1>We recommend places that you'll love based on what you listen to on Spotify.</h1>
 
-<%- if devise_mapping.registerable? && controller_name != 'registrations' %>
-  <%= link_to "Sign up", new_registration_path(resource_name) %><br />
-<% end %>
-
-<%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
-  <%= link_to "Forgot your password?", new_password_path(resource_name) %><br />
-<% end %>
-
-<%- if devise_mapping.confirmable? && controller_name != 'confirmations' %>
-  <%= link_to "Didn't receive confirmation instructions?", new_confirmation_path(resource_name) %><br />
-<% end %>
-
-<%- if devise_mapping.lockable? && resource_class.unlock_strategy_enabled?(:email) && controller_name != 'unlocks' %>
-  <%= link_to "Didn't receive unlock instructions?", new_unlock_path(resource_name) %><br />
-<% end %>
-
-<%- if devise_mapping.omniauthable? %>
-  <%- resource_class.omniauth_providers.each do |provider| %>
-    <%= button_to "Sign in with #{OmniAuth::Utils.camelize(provider)}", omniauth_authorize_path(resource_name, provider), data: {turbo: false}, id: 'spotify', class: 'fa-brands fa-spotify btn btn-success' %><br/>
-  <% end %>
-<% end %>
+      <div class="spotify">
+        <i class="fa-brands fa-spotify" id="logo"></i>
+        <%- if devise_mapping.omniauthable? %>
+          <%- resource_class.omniauth_providers.each do |provider| %>
+            <%= button_to "Sign in with #{OmniAuth::Utils.camelize(provider)}", omniauth_authorize_path(resource_name, provider), data: {turbo: false}, id: 'spotify' %>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+<div>

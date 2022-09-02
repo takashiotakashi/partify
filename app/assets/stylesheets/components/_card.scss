@@ -7,6 +7,30 @@
 #event-show-image {
   width: 100%;
 }
+.spotify {
+  padding: 8px;
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(30, 215, 96);
+  width: 200px;
+  border-radius: 100px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+
+
+  #spotify {
+    font-family: 'Rubik';
+    color: white;
+    border: none;
+    background: none;
+  }
+
+  #logo {
+    color: white;
+    font-size: 20px;
+  }
+}
 
 #info-show {
   margin: 10px;
