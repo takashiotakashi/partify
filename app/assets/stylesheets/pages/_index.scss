@@ -22,5 +22,22 @@
       #000000 20px
     );
   }
+
+  .stripe-2 {
+    color: rgb(255, 255, 255);
+    background: rgb(0, 0, 0);
+  }
   
+  #img-temporaria {
+      background-image: image-url("partify-home.jpg");
+      height: 225px;
+      background-size: cover;
+      background-position: center;
+      margin-top: 0;
+    }
+
+h6 {
+    margin-bottom: 0;
+}
+
 // temporario

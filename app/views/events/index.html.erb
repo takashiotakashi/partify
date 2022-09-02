@@ -19,8 +19,12 @@
           <%= link_to event_path(event) do %>
             <%= image_tag "#{event.image}", class: "w-100" %>
           <% end %>
-          <h5><%= event.name %></h5>
-          <h6><%= event.date %></h6>
+          <div class="module">
+            <div class="stripe-2">
+              <h5><%= event.name %></h5>
+              <h6><%= event.date %></h6>
+            </div>
+          </div>
         </div>
       </div>
       <% end %>
@@ -34,3 +38,7 @@
     <span class="visually-hidden">Next</span>
   </button>
 </div>
+
+<%# temporario %>
+<div id="img-temporaria"></div>
+<%# temporario %>
