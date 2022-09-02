@@ -3,6 +3,7 @@ import { Controller } from "@hotwired/stimulus"
 // Connects to data-controller="user-location"
 export default class extends Controller {
   connect() {
+    this.firstRedirect = false
     navigator.geolocation.getCurrentPosition(this.success, this.error, this.options);
   }
 
@@ -13,7 +14,7 @@ export default class extends Controller {
   };
 
   success = (pos) => {
-    var crd = pos.coords;
+    const crd = pos.coords;
 
     if (!window.location.href.includes("?lat=")) {
       window.location.replace(window.location.href + `?lat=${crd.latitude}&lng=${crd.longitude}`)
@@ -26,7 +27,13 @@ export default class extends Controller {
   };
 
   error = (err) => {
-    console.warn('ERROR(' + err.code + '): ' + err.message);
+    if (this.firstRedirect){
+
+      this.firstRedirect = false
+      window.location.href = '/profiles/new';
+      console.warn('ERROR(' + err.code + '): ' + err.message);
+
+    }
   };
 
 }
