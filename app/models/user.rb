@@ -6,7 +6,8 @@ class User < ApplicationRecord
   after_validation :geocode, if: :will_save_change_to_address?
 
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
-  Dotenv.load # is this safe?
+  # Dotenv.load # is this safe?
+
   has_many :reviews, dependent: :destroy
   belongs_to :fav_genre, class_name: 'Genre', optional: true
 

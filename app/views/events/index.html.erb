@@ -5,6 +5,12 @@
   data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
 </div>
 
+<%# temporario para apresentacao %>
+<div class="module">
+  <h2 class="stripe-1">Events</h2>
+</div>
+<%# temporario para apresentacao %>
+
 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
       <% @events.each_with_index do |event, index| %>
@@ -13,8 +19,12 @@
           <%= link_to event_path(event) do %>
             <%= image_tag "#{event.image}", class: "w-100" %>
           <% end %>
-          <h5><%= event.name %></h5>
-          <h6><%= event.date %></h6>
+          <div class="module">
+            <div class="stripe-2">
+              <h5><%= event.name %></h5>
+              <h6><%= event.date %></h6>
+            </div>
+          </div>
         </div>
       </div>
       <% end %>
@@ -28,3 +38,7 @@
     <span class="visually-hidden">Next</span>
   </button>
 </div>
+
+<%# temporario %>
+<div id="img-temporaria"></div>
+<%# temporario %>
