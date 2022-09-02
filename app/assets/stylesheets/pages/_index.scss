@@ -1,2 +1,26 @@
 // Import page-specific CSS files here.
 @import "home";
+
+// temporario
+.module {
+    background: transparent;
+    > h2 {
+      padding: 1rem;
+      margin-bottom: 0;
+      align-self: center;
+    }
+    margin-bottom: 0;
+  }
+  
+  .stripe-1 {
+    color: white;
+    background: repeating-linear-gradient(
+      135deg,
+      #000000,
+      #000000 10px,
+      #000000 10px,
+      #000000 20px
+    );
+  }
+  
+// temporario

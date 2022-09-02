@@ -5,6 +5,12 @@
   data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
 </div>
 
+<%# temporario para apresentacao %>
+<div class="module">
+  <h2 class="stripe-1">Events</h2>
+</div>
+<%# temporario para apresentacao %>
+
 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
       <% @events.each_with_index do |event, index| %>
