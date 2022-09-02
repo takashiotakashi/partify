@@ -1,7 +1,10 @@
 require 'open-uri'
-
 class User < ApplicationRecord
 # Include default devise modules. Others available are:
+
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
+
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   Dotenv.load # is this safe?
   has_many :reviews, dependent: :destroy

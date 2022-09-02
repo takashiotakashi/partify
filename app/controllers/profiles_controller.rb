@@ -5,10 +5,10 @@ class ProfilesController < ApplicationController
 
   def create
     @profile = current_user
-    if @profile.update!(user_params)
-      redirect_to root_path
+    if @profile.update(user_params)
+      redirect_to events_path(address: :user)
     else
-      render :new
+      render :new, status: :unprocessable_entity
     end
   end
 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_09_01_171743) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_02_182852) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -63,6 +63,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_01_171743) do
     t.string "token"
     t.datetime "token_expiry"
     t.bigint "fav_genre_id"
+    t.float "latitude"
+    t.float "longitude"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["fav_genre_id"], name: "index_users_on_fav_genre_id"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
