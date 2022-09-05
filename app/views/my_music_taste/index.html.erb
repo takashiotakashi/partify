@@ -1,18 +1,4 @@
 
-<div data-controller="cloud"
-     data-action="">
-  <% current_user.grab_user_genres.each do |array| %>
-    <% word = array[0] %>
-    <% freq = array[1] %>
-    <%= javascript_tag "makeCloud()" %>
-    <%# <script type="text/javascript"> %>
-      <%# makeCloud(word, freq) %>
-    <%# </script> %>
-  <% end %>
+<div id="word-cloud" data-controller="cloud"
+     data-cloud-words-value="<%= current_user.cloud.to_json %>">
 </div>
-
-
-
-<script type="text/javascript" charset="utf-8">
-  var genres = <%= current_user.grab_user_genres || 'null' %>;
-</script>

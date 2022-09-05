@@ -66,6 +66,13 @@ class User < ApplicationRecord
     return spotify_genres.tally.sort_by { |_k, v| v }.reverse.to_h
   end
 
+  def cloud
+    genre_hash = grab_user_genres
+    genre_hash.take(11).map do |k, v|
+      { x: k, value: v, category: k}
+    end
+  end
+
   private
 
   def set_fav_genre
