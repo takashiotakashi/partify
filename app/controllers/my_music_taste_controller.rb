@@ -1,2 +1,3 @@
 class MyMusicTasteController < ApplicationController
+
 end

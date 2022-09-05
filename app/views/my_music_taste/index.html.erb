@@ -2,8 +2,17 @@
 <div data-controller="cloud"
      data-action="">
   <% current_user.grab_user_genres.each do |array| %>
-      <% word = array[0] %>
-      <% freq = array[1] %>
-      <%= word %>
+    <% word = array[0] %>
+    <% freq = array[1] %>
+    <%= javascript_tag "makeCloud()" %>
+    <%# <script type="text/javascript"> %>
+      <%# makeCloud(word, freq) %>
+    <%# </script> %>
   <% end %>
 </div>
+
+
+
+<script type="text/javascript" charset="utf-8">
+  var genres = <%= current_user.grab_user_genres || 'null' %>;
+</script>

@@ -4,9 +4,10 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
   connect() {
     console.log("connected cloud")
+    console.log(genres)
 
   }
-  makeCloud(){
+  makeCloud(word, freq){
       /*  ======================= SETUP ======================= */
   var config = {
     trace: true,
@@ -18,12 +19,12 @@ export default class extends Controller {
     font: "sans-serif"
   }
 
-  var words = ["words", "are", "cool", "and", "so", "are", "you", "inconstituent", "funhouse!", "apart", "from", "Steve", "fish"].map(function(word) {
-    return {
-        word: word,
-        freq: Math.floor(Math.random() * 50) + 10
-    }
-  })
+  // var words = ["words", "are", "cool", "and", "so", "are", "you", "inconstituent", "funhouse!", "apart", "from", "Steve", "fish"].map(function(word) {
+  //   return {
+  //       word: word,
+  //       freq: Math.floor(Math.random() * 50) + 10
+  //   }
+  // })
 
   words.sort(function(a, b) {
     return -1 * (a.freq - b.freq);
