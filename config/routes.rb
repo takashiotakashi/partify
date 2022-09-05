@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :events, only: %i[index show]
   resources :profiles, only: %i[new create]
   get "home", to: "pages#home"
+  get "my_profile", to: "pages#my_profile"
 
   resources :my_music_taste, only: :index
 
