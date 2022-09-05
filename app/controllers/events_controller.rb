@@ -1,7 +1,8 @@
 class EventsController < ApplicationController
   def index
     # @events = Event.all
-    @events = Event.where(genre_id: current_user.fav_genre_id)
+    # @events = Event.where(genre_id: current_user.fav_genre_id)
+    @events = Event.where(genres: current_user.fav_genre_id)
 
 
     @events = @events.near([current_user.latitude, current_user.longitude], 150) if params[:address] == "user"

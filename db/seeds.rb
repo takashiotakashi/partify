@@ -55,7 +55,7 @@ end
 
 # estabelecimentos abaixo
 
-milo = Event.new(
+Event.new(
   name: "Milo Garage",
   image: "https://res.cloudinary.com/dkearav60/image/upload/c_scale,w_884/v1662415481/estabelecimentos/milo_garage.png",
   genre_id: 1,
@@ -63,21 +63,21 @@ milo = Event.new(
   description: "Casa underground com grafite nas paredes em que DJs tocam música eletrônica, rock independente e funk."
 )
 
-beco = Event.new(
+Event.new(
   name: "Beco 203",
   image: "https://res.cloudinary.com/dkearav60/image/upload/v1662415483/estabelecimentos/beco_203.png",
   genre_id: 1,
   address: "R. Augusta, 609 - Consolação, São Paulo - SP",
   description: "Balada com público mix em espaço eletrônico animado por bandas locais ao vivo com noites especiais e open bar."
 )
-morrison = Event.new(
+Event.new(
   name: "Morrison Rock Bar",
   image: "https://res.cloudinary.com/dkearav60/image/upload/c_scale,w_1710/v1662416021/estabelecimentos/morrison.png",
   genre: 1,
   address: "R. Fidalga, 531 - Pinheiros, São Paulo - SP",
   description: "Bar espaçoso com três andares, petiscos e shows de rock animados. Aberto nas noites de quinta a sábado."
 )
-manifesto = Event.new(
+Event.new(
   name: "Manifesto Bar",
   image: "https://res.cloudinary.com/dkearav60/image/upload/c_scale,w_1339/v1662415950/estabelecimentos/manifesto.png",
   genre: 1,
