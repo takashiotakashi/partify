@@ -2,7 +2,7 @@
 @import "home";
 
 // temporario
-.module {
+.card-event-info {
     background: transparent;
     > h2 {
       padding: 1rem;
@@ -24,8 +24,8 @@
   }
 
   .stripe-2 {
-    color: rgb(255, 255, 255);
-    background: rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+    background: rgb(255, 255, 255);
   }
   
   #img-temporaria {

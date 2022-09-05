@@ -1,0 +1,40 @@
+.card-event {
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  }
+  
+  .card-event > .img-event {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .card-event-info {
+  
+  }
+  
+  .stripe-2 {
+  
+  }
+  
+  .card-event .card-event-info {
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: relative;
+    border: solid black;
+  }
+  
+  h5 {
+    font-size: 24px;
+    font-weight: bolder;
+    margin: 0;
+  }
+
+  h6 {
+    font-size: 16px;
+    opacity: .7;
+    margin: 0;
+  }
