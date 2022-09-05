@@ -1,1 +1,9 @@
-<%= current_user.grab_user_genres %>
+
+<div data-controller="cloud"
+     data-action="">
+  <% current_user.grab_user_genres.each do |array| %>
+      <% word = array[0] %>
+      <% freq = array[1] %>
+      <%= word %>
+  <% end %>
+</div>

@@ -63,7 +63,8 @@ class User < ApplicationRecord
       end
     end
 
-    return spotify_genres.tally.sort_by { |_k, v| v }
+    gon.genres = spotify_genres.tally.sort_by { |_k, v| v }.reverse
+
   end
 
   private

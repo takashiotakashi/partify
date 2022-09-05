@@ -22,6 +22,8 @@ gem 'kimurai'
 
 gem 'nokogiri'
 
+gem 'gon'
+
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "turbo-rails"
 
