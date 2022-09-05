@@ -53,4 +53,43 @@ Genre.all.each do |genre|
   puts "#{genre} Event created"
 end
 
+# estabelecimentos abaixo
+
+milo = Event.new(
+  name: "Milo Garage",
+  image: "https://res.cloudinary.com/dkearav60/image/upload/c_scale,w_884/v1662415481/estabelecimentos/milo_garage.png",
+  genre_id: 1,
+  address: "Av. Pompéia, 1681 - Pompeia, São Paulo - SP",
+  description: "Casa underground com grafite nas paredes em que DJs tocam música eletrônica, rock independente e funk."
+)
+
+beco = Event.new(
+  name: "Beco 203",
+  image: "",
+  genre_id: 1,
+  address: "R. Augusta, 609 - Consolação, São Paulo - SP",
+  description: "Balada com público mix em espaço eletrônico animado por bandas locais ao vivo com noites especiais e open bar."
+)
+morrison = Event.new(
+  name: "Morrison Rock Bar",
+  image: ,
+  genre: 1,
+  address: "R. Fidalga, 531 - Pinheiros, São Paulo - SP",
+  description: "Bar espaçoso com três andares, petiscos e shows de rock animados. Aberto nas noites de quinta a sábado."
+)
+manifesto = Event.new(
+  name: "Manifesto Bar",
+  image: ,
+  genre: 1,
+  address: "R. Iguatemi, 36 - Itaim Bibi, São Paulo - SP",
+  description: "Bar com palco amplo para bandas de rock, vários espaços, mezanino e sala de jogos."
+)
+Event.new(
+  name: ,
+  image: ,
+  genre: ,
+  address: ,
+  description:
+)
+
 puts "#{Event.count} events created"
