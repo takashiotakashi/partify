@@ -8,7 +8,7 @@ class EventsController < ApplicationController
 
 
 
-    @events = @events.near([params[:lat], params[:lng]], 150) if params[:lat].present? && params[:lng].present?
+    @events = @events.near([params[:lat], params[:lng]], 15) if params[:lat].present? && params[:lng].present?
 
     if @events.present?
       @markers = @events.geocoded.map do |event|

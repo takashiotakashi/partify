@@ -65,21 +65,21 @@ milo = Event.new(
 
 beco = Event.new(
   name: "Beco 203",
-  image: "",
+  image: "https://res.cloudinary.com/dkearav60/image/upload/v1662415483/estabelecimentos/beco_203.png",
   genre_id: 1,
   address: "R. Augusta, 609 - Consolação, São Paulo - SP",
   description: "Balada com público mix em espaço eletrônico animado por bandas locais ao vivo com noites especiais e open bar."
 )
 morrison = Event.new(
   name: "Morrison Rock Bar",
-  image: ,
+  image: "https://res.cloudinary.com/dkearav60/image/upload/c_scale,w_1710/v1662416021/estabelecimentos/morrison.png",
   genre: 1,
   address: "R. Fidalga, 531 - Pinheiros, São Paulo - SP",
   description: "Bar espaçoso com três andares, petiscos e shows de rock animados. Aberto nas noites de quinta a sábado."
 )
 manifesto = Event.new(
   name: "Manifesto Bar",
-  image: ,
+  image: "https://res.cloudinary.com/dkearav60/image/upload/c_scale,w_1339/v1662415950/estabelecimentos/manifesto.png",
   genre: 1,
   address: "R. Iguatemi, 36 - Itaim Bibi, São Paulo - SP",
   description: "Bar com palco amplo para bandas de rock, vários espaços, mezanino e sala de jogos."
