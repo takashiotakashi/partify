@@ -8,9 +8,20 @@
 
 .chart {
   background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  // justify-content: center;
+  flex-direction: column;
+  height: 100vh;
 }
 
 #title {
   color: #000000;
-  font-size: medium;
+  font-size: large;
+}
+
+#back-cloud {
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
 }

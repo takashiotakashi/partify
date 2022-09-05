@@ -7,4 +7,6 @@
   <div id="word-cloud" data-controller="cloud"
       data-cloud-words-value="<%= current_user.cloud.to_json %>">
   </div>
+
+  <div><%= link_to "Back to Events", events_path, class: "btn btn-secondary d-flex justify-content-center" %></div>
 </div>
