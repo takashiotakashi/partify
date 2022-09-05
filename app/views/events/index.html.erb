@@ -11,33 +11,27 @@
 </div>
 <%# temporario para apresentacao %>
 
-<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
+
       <% @events.each_with_index do |event, index| %>
-      <div class="carousel-item <%='active' if index.zero?%>">
-        <div class="d-flex flex-column">
-          <%= link_to event_path(event) do %>
-            <%= image_tag "#{event.image}", class: "w-100" %>
-          <% end %>
-          <div class="module">
-            <div class="stripe-2">
-              <h5><%= event.name %></h5>
-              <h6><%= event.date %></h6>
+        <div class="card-event mt-4">
+          <div class="d-flex flex-column">
+            <%= link_to event_path(event) do %>
+              <div class='img-event'> <%= image_tag "#{event.image}", class: "w-100" %></div>
+            <% end %>
+            <div class="card-event-info">
+              <div class="stripe-2">
+                <h5 class="mb-2"><i class="fa-solid fa-map-pin me-2"></i><%= event.name %></h5>
+                <h6><i class="fa-solid fa-calendar-days me-2"></i><%= event.date %></h6>
+                <%= link_to event_path(event), class: "btn-event" do %>
+                  Go to Event <i class="fa-solid fa-arrow-right"></i>
+                <% end %>
+              </div>
             </div>
           </div>
         </div>
-      </div>
       <% end %>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
+      
+
 
 <%# temporario %>
 <div id="img-temporaria"></div>
