@@ -25,7 +25,7 @@ export default class extends Controller {
 
     // create and configure a color scale.
     var customColorScale = anychart.scales.linearColor();
-    customColorScale.colors(["#656565", "#ffffff"]);
+    customColorScale.colors(["#000000", "#656565"]);
 
     // set the color scale as the color scale of the chart
     chart.colorScale(customColorScale);
