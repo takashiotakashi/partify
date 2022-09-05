@@ -1,4 +1,10 @@
 
-<div id="word-cloud" data-controller="cloud"
-     data-cloud-words-value="<%= current_user.cloud.to_json %>">
+<div class="chart">
+  <div>
+    <h1 id="title">Here's what you've been listening to</h1>
+  </div>
+
+  <div id="word-cloud" data-controller="cloud"
+      data-cloud-words-value="<%= current_user.cloud.to_json %>">
+  </div>
 </div>
