@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   resources :profiles, only: %i[new create]
   get "home", to: "pages#home"
 
+  resources :my_music_taste, only: :index
+
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   # Defines the root path route ("/")
