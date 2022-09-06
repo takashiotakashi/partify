@@ -7,16 +7,16 @@
     <div id="info-show">
       <h1><%= @event.name %></h1>
       <%= @event.date %>
-      <div id="description-head"><h3>Descrição do Evento</h3></div>
+      <div id="description-head"><h3>About</h3></div>
       <div id="description-body"><%= @event.description %></div>
       <%= @event.address %>
     </div>
   </div>
 
-  <div><%= link_to "Tickets", @event.link, target: :_blank, class: "btn btn-primary d-flex justify-content-center" %></div>
+  <div><%= link_to "Get tickets", @event.link, target: :_blank, class: "btn btn-primary d-flex justify-content-center" %></div>
 
 <% else %>
-<%# se não tem data, pode ser um estabelecimento %>
+<%# se não tem data, deve ser um estabelecimento %>
   <div>
     <%= image_tag(@event.image, id: 'event-show-image') %>
   </div>
