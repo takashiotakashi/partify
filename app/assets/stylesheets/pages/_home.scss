@@ -20,7 +20,7 @@
 }
 
 .oi {
-  display: flex;  
+  display: flex;
   justify-content: center;
   padding: 15%;
 }
@@ -38,13 +38,15 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 5px 25px 30px 25px;
+  text-align: center;
+  padding: 20px;
   margin: 0 40px;
   background-color: rgba($color: #000000, $alpha: 0.35);
   position: fixed;
   bottom: 2rem;
   h1 {
     color: white;
+    font-weight: 300;
   }
 }
 
