@@ -1,5 +1,6 @@
 // Import page-specific CSS files here.
 @import "home";
+@import "my_profile";
 
 // temporario
 .card-event-info {
@@ -14,13 +15,20 @@
 
   .stripe-1 {
     color: white;
-    background: repeating-linear-gradient(
-      135deg,
-      #000000,
-      #000000 10px,
-      #000000 10px,
-      #000000 20px
-    );
+    font-size: 22px;
+    font-family: 'Rubik';
+    padding: 0.15rem;
+    background: rgb(0, 0, 0);
+    margin: 0;
+    border-bottom: 4px solid rgb(255, 255, 255);
+
+    // background: repeating-linear-gradient(
+    //   135deg,
+    //   #000000,
+    //   #000000 10px,
+    //   #000000 10px,
+    //   #000000 20px
+    // );
   }
 
   .stripe-2 {
