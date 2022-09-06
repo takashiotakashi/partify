@@ -1,8 +1,8 @@
 class EventsController < ApplicationController
   def index
     # @events = Event.all
-    @events = Event.where(genre_id: current_user.fav_genre_id)
-    # @events = Event.where(genres: current_user.fav_genre_id) implementar lógica para que match se genres do events tiver matches com o genres do user
+
+    @events = Event.where(genres: current_user.fav_genre)
 
     @events = @events.near([current_user.latitude, current_user.longitude], 150) if params[:address] == "user"
 
