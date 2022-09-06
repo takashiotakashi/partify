@@ -6,13 +6,12 @@ export default class extends Controller {
   static values = { words: Array }
 
   connect() {
-    console.log("conneceeeeeeeeted cloud");
+    console.log("connected cloud");
 
     this.cloud();
   }
 
   cloud() {
-
 
    // create a tag (word) cloud chart
     let data = this.wordsValue
@@ -25,16 +24,22 @@ export default class extends Controller {
 
     // create and configure a color scale.
     var customColorScale = anychart.scales.linearColor();
-    customColorScale.colors(["#000000", "#656565"]);
+    customColorScale.colors(["#6e6e6e", "#ffffff"]);
 
     // set the color scale as the color scale of the chart
     chart.colorScale(customColorScale);
 
-
-
     // chart.data(data, {mode: "by-word"});
 
     // chart.background().fill("black")
+
+    var background = chart.background();
+    background.fill({
+      // set colors position
+      keys: ["#400101", "#000", "#000", "#07012e"],
+      // set angle of colors drawing
+      angle: -130
+    });
 
     chart
 

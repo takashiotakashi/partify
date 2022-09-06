@@ -1,12 +1,25 @@
 <div class="profile-container">
+  <h1>My account</h1>
   <div class="user-info">
-    <h5>My account</h5>
     <img class="user-image" src="<%= @user.picture_url %>">
-    <strong><%= @user.name %></strong>
+    <h2><strong><%= @user.name %></strong></h2>
   </div>
 
-  <div><%= @user.email %></div>
-  
+</div>
+
+
+<div class="details">
+  <span id="description-head">Email</span>
+  <span><%= @user.email %></span>
+
+  <% if @user.address? %>
+    <span id="description-head">Home address</span>
+    <span><%= @user.address %></span>
+  <% end %>
+  <span id="description-head">Last access</span>
+  <span><%= @user.updated_at %></span>
+
 
 
 </div>
+<div id="back-button sticky-footer" class="flex-shrink-0"><%= link_to "Back to events", events_path, class: "btn btn-secondary d-flex justify-content-center" %></div>

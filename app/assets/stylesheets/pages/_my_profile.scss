@@ -1,3 +1,28 @@
-.profile-container {
-  margin: 25px;
+.profile-container{
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+  margin: 25px 25px 0 25px;
+
+  .user-info {
+    display:flex;
+    flex-direction: column;
+  }
+
+  .user-image{
+    border-radius: 50%;
+    max-width: 50%;
+    align-self: center;
+    margin: 20px 0;
+  }
+
+}
+
+.details {
+  margin: 10px 25px;
+  text-align: left;
+  justify-content: left;
+  display:flex;
+  flex-direction:column;
 }
