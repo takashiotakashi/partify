@@ -1,17 +1,36 @@
-<div>
-  <%= image_tag(@event.image, id: 'event-show-image') %>
-</div>
-
-<div class='card-trip'>
-  <div id="info-show">
-    <h1><%= @event.name %></h1>
-    <%= @event.date %>
-    <div id="description-head"><h3>Descrição do Evento</h3></div>
-    <div id="description-body"><%= @event.description %></div>
-    <%= @event.address %>
+<% if @event.date? %>
+  <div>
+    <%= image_tag(@event.image, id: 'event-show-image') %>
   </div>
-</div>
 
-<div><%= link_to "Tickets", @event.link, target: :_blank, class: "btn btn-primary d-flex justify-content-center" %></div>
+  <div class='card-trip'>
+    <div id="info-show">
+      <h1><%= @event.name.upcase %></h1>
+      <div id="blacktag"><%= @event.date %></div>
+      <div id="blacktag"><%= @event.address %></div>
+      <div id="description-head"><span>About:</span></div>
+      <div id="description-body"><%= @event.description %></div>
+    </div>
+  </div>
 
-<div id="back-cloud"><%= link_to "Back to Events", events_path, class: "btn btn-secondary d-flex justify-content-center" %></div>
+  <div><%= link_to "Get tickets", @event.link, target: :_blank, class: "btn btn-dark d-flex justify-content-center" %></div>
+
+<% else %>
+<%# se não tem data, deve ser um estabelecimento %>
+  <div>
+    <%= image_tag(@event.image, id: 'event-show-image') %>
+  </div>
+
+  <div class='card-trip'>
+    <div id="info-show">
+      <h1><%= @event.name.upcase %></h1>
+      <%# talvez inserir tag com estilo? %>
+      <div id="blacktag"><%= @event.address %></div>
+      <div id="description-head"><span>About:</span></div>
+      <div id="description-body"><%= @event.description %></div>
+    </div>
+  </div>
+<% end %>
+
+
+<div id="back-button"><%= link_to "Back to events", events_path, class: "btn btn-secondary d-flex justify-content-center" %></div>

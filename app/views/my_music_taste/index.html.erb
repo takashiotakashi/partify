@@ -1,12 +1,12 @@
 
 <div class="chart">
-  <div>
-    <h1 id="title">Here's what you've been listening to</h1>
+  <div id="cloud-header">
+    <span id="border-tag">Here's what you've been listening to</span>
   </div>
 
   <div id="word-cloud" data-controller="cloud"
       data-cloud-words-value="<%= current_user.cloud.to_json %>">
   </div>
 
-  <div><%= link_to "Back to Events", events_path, class: "btn btn-secondary d-flex justify-content-center" %></div>
+  <div id="back-button"><%= link_to "Back to Events", events_path, class: "btn btn-secondary d-flex justify-content-center" %></div>
 </div>
