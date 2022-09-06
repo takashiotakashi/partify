@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_09_05_234347) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_06_174307) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -19,7 +19,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_05_234347) do
     t.string "address"
     t.string "description"
     t.decimal "price"
-    t.bigint "genre_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "date"
@@ -29,7 +28,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_05_234347) do
     t.string "image"
     t.string "link"
     t.string "genres"
-    t.index ["genre_id"], name: "index_events_on_genre_id"
   end
 
   create_table "genres", force: :cascade do |t|
@@ -63,15 +61,12 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_05_234347) do
     t.string "picture_url"
     t.string "token"
     t.datetime "token_expiry"
-    t.bigint "fav_genre_id"
     t.float "latitude"
     t.float "longitude"
+    t.string "fav_genre"
     t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["fav_genre_id"], name: "index_users_on_fav_genre_id"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "events", "genres"
   add_foreign_key "reviews", "users"
-  add_foreign_key "users", "genres", column: "fav_genre_id"
 end
