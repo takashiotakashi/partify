@@ -4,9 +4,9 @@ class EventsController < ApplicationController
 
     @events = Event.where(genres: current_user.fav_genre)
 
-    @events = @events.near([current_user.latitude, current_user.longitude], 150) if params[:address] == "user"
+    @events = @events.near([current_user.latitude, current_user.longitude], 10) if params[:address] == "user"
 
-    @events = @events.near([params[:lat], params[:lng]], 15) if params[:lat].present? && params[:lng].present?
+    @events = @events.near([params[:lat], params[:lng]], 10) if params[:lat].present? && params[:lng].present?
 
     if @events.present?
       @markers = @events.geocoded.map do |event|
