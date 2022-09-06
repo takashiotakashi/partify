@@ -3,3 +3,14 @@
   height: 250px;
 
 }
+
+.mapboxgl-popup {
+  max-width: 50px;
+}
+
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: "Rubik";
+  padding: 10px;
+  margin: 10px;
+}
