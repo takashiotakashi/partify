@@ -6,21 +6,14 @@ class User < ApplicationRecord
   after_validation :geocode, if: :will_save_change_to_address?
 
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
-  # Dotenv.load # is this safe?
 
   has_many :reviews, dependent: :destroy
-  # belongs_to :fav_genre, class_name: 'Genre', optional: true
-
-  #validates :address, presence: true, on: :update # Por que obrigar a colocar endereço?
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,
          :omniauthable, omniauth_providers: [:spotify]
 
   after_create :set_fav_genre
-
-  # has_one_attached :photo
-  # has_one :favorites, dependent: :destroy # caso implantemos favorites
 
   def self.find_for_oauth(auth)
     # Create the user params
@@ -68,9 +61,8 @@ class User < ApplicationRecord
 
   def cloud
     genre_hash = grab_user_genres
-    genre_hash.take(11).map do |k, v|
+    genre_hash.take(20).map do |k, v|
       { x: k, value: v * 10 }
-      # { x: k, value: v * 10, category: k}
     end
   end
 
@@ -87,8 +79,6 @@ class User < ApplicationRecord
       end
     end
     top_genre = spotify_genres.flatten.tally.max_by { |_k, v| v }.first
-
-    # genre = Genre.find_by(name: top_genre)
 
     self.fav_genre = top_genre if top_genre
     self.save!

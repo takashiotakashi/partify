@@ -22,7 +22,8 @@ eventfunk1 = Event.create!(name: "HIGH ✶ É Funk, É Rave, É Revoada na Blitz
                           description: "A Música Eletrônica e o Funk nunca estiveram tão próximos, a Rave e o Bailão também não, pensando nisso nós criamos a HIGH! Uma festa que vai te levar tão alto que você vai curtir tudo dos dois mundos em uma única festa. Seja você Funk, 150Bpm, do Brazilian Bass, do Trance, do Rave Funk, do que for, se você gosta desses dois mundos, a HIGH é o seu lugar.",
                           address: "Rua Augusta, 657, São Paulo - SP",
                           image: "Blitz.png",
-                          genres: ["funk", "electronica"],
+                          # genres: ["funk", "electronica"],
+                          genres: "funk",
                           link: "https://www.sympla.com.br/evento/high-e-funk-e-rave-e-revoada-na-blitz-haus-rave-funk-eletronico-e-muito-mais/1694492")
 
 eventfunk2 = Event.create!(name: "Naza - Sábado com Funk, Rap, Eletro e Pop",
@@ -30,7 +31,8 @@ eventfunk2 = Event.create!(name: "Naza - Sábado com Funk, Rap, Eletro e Pop",
                           description: "A Naza é uma festa voltada para a exploração de ritmos, nossa missão oficial é enviar nossos tripulantes para a galáxia Andrômeda. Embarque na nossa espaço nave e vem fazer esse rolê intergaláctico!",
                           address: "Rua Augusta, 765, São Paulo",
                           image: "Naza.png",
-                          genres: ["funk", "rap"],
+                          # genres: ["funk", "rap"],
+                          genres: "funk",
                           link: "https://www.sympla.com.br/evento/naza-sabado-com-funk-rap-eletro-e-pop/1701665")
 
 eventfunk3 = Event.create!(name: "Fritação 200! | Open Bar | Funk 200 bpm na Selva! | ( Sexta | 23.09)",
@@ -240,12 +242,6 @@ Event.new(
   description: "Bar com palco amplo para bandas de rock, vários espaços, mezanino e sala de jogos."
 ).save
 
-# Event.new(
-#   name: ,
-#   image: ,
-#   genre: ,
-#   address: ,
-#   description:
-# )
+
 
 puts "#{Event.count} events created"
