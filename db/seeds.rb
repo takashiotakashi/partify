@@ -18,12 +18,7 @@ puts "Creating genres..."
 
 funk = Genre.create!(name: "funk")
 rock = Genre.create!(name: "rock")
-Genre.create!(name: "electronica")
-Genre.create!(name: "pop")
-Genre.create!(name: "sertanejo")
-Genre.create!(name: "reggaeton")
-Genre.create!(name: "afrobeats")
-Genre.create!(name: "metal")
+metal = Genre.create!(name: "metal")
 puts "#{Genre.count} genres created"
 
 eventfunk1 = Event.create!(name: "HIGH ✶ É Funk, É Rave, É Revoada na Blitz Haus ✶ Rave Funk, Eletrônico e Muito Mais!",
@@ -42,7 +37,7 @@ eventfunk2 = Event.create!(name: "Naza - Sábado com Funk, Rap, Eletro e Pop",
                           genre: funk,
                           link: "https://www.sympla.com.br/evento/naza-sabado-com-funk-rap-eletro-e-pop/1701665")
 
-eventfunk3 = Event.create!(name: "Fritação 200! | Open Bar | Funk 200 bpm na Selva! | ( Sexta | 23.09)",
+eventfunk3 = Event.create!(name: "Fritação 200! | Open Bar | Funk 200 bpm na Selva!",
                           date: "Sex, 23 Set - 22:00",
                           description: "Fritando e Sarrando.
                           Em uma Sexta de Open Bar na Selva!
@@ -176,7 +171,7 @@ eventrock4 = Event.create!(name: "Rock Collection e Mach 5",
                           genre: rock,
                           link: "https://www.sympla.com.br/evento/rock-collection-e-mach-5/1703113")
 
-eventrock5 = Event.create!(name: "Show de Temporada História do Rock Parte 2 - School of Rock Brooklin-Campo Belo",
+emetal2 = Event.create!(name: "Show de Temporada História do Rock Parte 2 - School of Rock Brooklin-Campo Belo",
                           date: "Dom, 25 Set - 12:00",
                           description: "O Show de Temporada da School of Rock Brooklin-Campo Belo, História do Rock - Parte 2: Rock 50's, Progressivo, Grunge e Indie, acontecerá no dia 25 de Setembro, em uma das mais novas e já prestigiadas casas de show de SP, o Legends Music Bar, na Vila Madalena.
                           O line-up das bandas e horários será disponibilizado na escola.
@@ -220,7 +215,7 @@ eventrock5 = Event.create!(name: "Show de Temporada História do Rock Parte 2 - 
 Event.new(
   name: "Milo Garage",
   image: "https://res.cloudinary.com/dkearav60/image/upload/c_scale,w_884/v1662415481/estabelecimentos/milo_garage.png",
-  genre_id: 1,
+  genre: rock,
   address: "Av. Pompéia, 1681 - Pompeia, São Paulo - SP",
   description: "Casa underground com grafite nas paredes em que DJs tocam música eletrônica, rock independente e funk."
 ).save
@@ -228,7 +223,7 @@ Event.new(
 Event.new(
   name: "Beco 203",
   image: "https://res.cloudinary.com/dkearav60/image/upload/v1662415483/estabelecimentos/beco_203.png",
-  genre_id: 1,
+  genre: rock,
   address: "R. Augusta, 609 - Consolação, São Paulo - SP",
   description: "Balada com público mix em espaço eletrônico animado por bandas locais ao vivo com noites especiais e open bar."
 ).save
@@ -236,7 +231,7 @@ Event.new(
 Event.new(
   name: "Morrison Rock Bar",
   image: "https://res.cloudinary.com/dkearav60/image/upload/c_scale,w_1710/v1662416021/estabelecimentos/morrison.png",
-  genre_id: 1,
+  genre: rock,
   address: "R. Fidalga, 531 - Pinheiros, São Paulo - SP",
   description: "Bar espaçoso com três andares, petiscos e shows de rock animados. Aberto nas noites de quinta a sábado."
 ).save
@@ -244,7 +239,7 @@ Event.new(
 Event.new(
   name: "Manifesto Bar",
   image: "https://res.cloudinary.com/dkearav60/image/upload/c_scale,w_1339/v1662415950/estabelecimentos/manifesto.png",
-  genre_id: 1,
+  genre: rock,
   address: "R. Iguatemi, 36 - Itaim Bibi, São Paulo - SP",
   description: "Bar com palco amplo para bandas de rock, vários espaços, mezanino e sala de jogos."
 ).save
@@ -255,6 +250,81 @@ Event.new(
 #   genre: ,
 #   address: ,
 #   description:
-# )
+#
+
+eventmetal1 = Event.create!(name: "ARCH ENEMY / BEHEMOTH EM SÃO PAULO",
+                          date: "Dom, 13 Nov - 18:00",
+                          description: "ARCH ENEMY / BEHEMOTH 'THE LATIN AMERICAN SIEGE' 2022 EM SÃO PAULO
+
+                          ANÚNCIO OFICIAL: NERVOSA E CRYPTA CONFIRMADAS AO LADO DE ARCH ENEMY E BEHEMOTH EM SÃO PAULO!
+
+                          Duas das mais reverenciadas bandas do metal mundial se aliaram para realizar a turnê mais brutal e avassaladora que cruzou os Estados Unidos a Europa em 2022: BEHEMOTH, da Polônia, e ARCH ENEMY, da Suécia. Com enorme satisfação, a Liberation Music Company trará a tour à América do Sul em novembro deste ano: The Latin American Siege Tour 2022!
+
+                          No Brasil, a turnê passará por sete cidades, em algumas delas em casas com a capacidade limitada.
+
+                          Nergal, frontman do BEHEMOTH e mente visionária criativa, informa:
+
+                          “Depois de mais de um ano fora dos palcos, não podemos pensar em um retorno melhor  às nossas legiões do que lhes oferecer uma performance de música nova e um evento memorável: uma combinação esmagadora de ARCH ENEMY e BEHEMOTH”.
+
+                          O BEHEMOTH é conhecido por elevar os padrões a cada apresentação de seu show ao vivo – como muitos recentemente testemunharam no evento incrivelmente bem-sucedido “In Absentia Dei”, transmitido ao vivo. Portanto, espere por uma performance nada menos que espetacular.
+
+                          O fundador e guitarrista do ARCH ENEMY, Michael Amott, partilha do mesmo sentimento, afirmando: “Como estamos passando por um período problemático e desafiador ultimamente, creio que todos nós precisamos de algo pelo qual esperar ansiosamente. Uma razão para acreditar, certo? Bem… aqui está ela!”.",
+                          address: "Avenida Francisco Matarazzo, 694, São Paulo - SP",
+                          image: "",
+                          genre: metal,
+                          link: "https://www.clubedoingresso.com/evento/archenemy-behemoth-sp")
+
+eventmetal2 = Event.create!(name: "DESTRUCTION E BURNING WITCHES EM SÃO PAULO",
+                          date: "Dom, 18 Set - 18:00",
+                          description: "Após anos de espera, os lendários veteranos do thrash alemão, DESTRUCTION, retornarão ao Brasil para uma série de quatros shows que farão parte da turnê latino-americana que celebrará os 40 anos da banda e promoverá o seu incendiário novo álbum, 'Diabolical', lançado em abril de 2022, pela Napalm Records. Além da artilharia pesada desencadeada em seu novo lançamento, não faltarão os inúmeros clássicos do Destruction, cristalizados na história do thrash metal mundial.
+
+                          A tour também será muito especial por contar com a presença inédita no Brasil de outra banda internacional, BURNING WITCHES, grupo totalmente formado por mulheres da cena metal suíça/holandesa, que combina elementos do heavy metal tradicional com power metal. ",
+                          address: "Rua Cardeal Arcoverde, 2899, São Paulo - SP",
+                          image: "",
+                          genre: metal,
+                          link: "https://www.clubedoingresso.com/evento/destruction-sp")
+
+eventmetal3 = Event.create!(name: "METAL RELICS FESTIVAL",
+                          date: "Sab, 19 Nov - 18:30",
+                          description: "A gravadora Metal Relics tem o orgulho em anunciar o primeiro Metal Relics Festival, um festival apenas com bandas brasileiras, que acontecerá no dia 19 de novembro de 2022, no Legends Music Bar, em São Paulo, a partir das 18h30. O festival marca o retorno da lendária banda Wizards aos palcos após 11 anos, além da estreia da banda Caravellus com a nova formação em SP. Outro grande nome do evento é o Aquaria, que se apresenta ao vivo depois de muito tempo. Para completar o line-up, as bandas Living Metal (com participação de Yara Häag) e XFears (com participação de Ciça Moreira) se apresentam mostrando a renovação da cena brasileira.",
+                          address: "Rua Inácio Pereira da Rocha, 367, São Paulo - SP",
+                          image: "",
+                          genre: metal,
+                          link: "https://www.sympla.com.br/evento/metal-relics-festival/1596891?lang=PT")
+
+eventmetal4 = Event.create!(name: "Trovão - Creatures - Inluzt - Biter - Sweet Danger",
+                          date: "Dom, 11 Dez - 16:00",
+                          description: "Caveira Velha Produções e Metal Daze Apresentam:
+
+                          LIMITADO EM 200 INGRESSOS!
+
+                          Dia 11 de Dezembro de 2022
+                          A partir das 16:00 Horas
+
+                          Trovão (Primeira e única apresentação da banda ao vivo)
+                          Creatures
+                          Inluzt
+                          Biter
+                          Sweet Danger",
+                          address: "Rua Inácio Pereira da Rocha, 367, São Paulo - SP",
+                          image: "",
+                          genre: metal,
+                          link: "https://www.sympla.com.br/evento/trovao-creatures-inluzt-biter-sweet-danger/1611845")
+
+eventmetal5 = Event.create!(name: "WEIGHT OF EMPTINESS (CHILE) + CRUCIFIXION BR + LES MÉMOIRES FALL EM SÃO PAULO",
+                          date: "Sex, 23 Set - 19:00",
+                          description: "UM EVENTO IMPERDÍVEL!
+
+                          Pela primeira vez no Brasil, os chilenos do WEIGHT OF EMPTINESS estarão em São Paulo para um show inesquecível na capital Paulista. Prester a lançar o seu terceiro disco, a banda irá mostrar o por que de ser uma das bandas mais importantes da cena metal chilena dos últimos anos.
+
+                          Na abertura, teremos 2 grandes bandas brasileiras,  a banda de Death / Black Metal Crucifixion BR e os joseenses da Les Mémoires Fall de Doom Metal.
+
+                          Uma oportunidade única de ver uma das principais bandas chilenas no Brasil.
+
+                          Obrigatório apresentação de carteirinha de vacinação, com esquema vacinal completo.",
+                          address: "Rua Xiririca, 237, São Paulo - SP",
+                          image: "",
+                          genre: metal,
+                          link: "https://www.sympla.com.br/evento/weight-of-emptiness-chile-crucifixion-br-les-memoires-fall-em-sao-paulo/1671835")
 
 puts "#{Event.count} events created"
