@@ -9,7 +9,9 @@
 # require "nokogiri"
 
 puts "Cleaning db..."
+
 Event.destroy_all
+User.destroy_all
 Genre.destroy_all
 puts "Db cleaned..."
 puts "Creating genres..."
