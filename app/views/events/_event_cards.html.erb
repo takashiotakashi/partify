@@ -13,13 +13,13 @@
 
                   <div class="favorite-star">
                     <% if current_user.favorites.where(event: event).any? %>
-          
+
                       <i class="fas fa-star favorite-star" data-controller="favorite" data-action="click->favorite#toggle" data-favorite-event-id-value="<%= event.id %>" data-favorite-user-id-value="<%= current_user.id %>"></i>
-                    
+
                     <% else %>
-                    
+
                       <i class="far fa-star favorite-star" data-controller="favorite" data-action="click->favorite#toggle" data-favorite-event-id-value="<%= event.id %>" data-favorite-user-id-value="<%= current_user.id %>"></i>
-                    
+
                   <% end %>
                   </div>
 
@@ -34,8 +34,9 @@
                   See details <i class="fa-solid fa-arrow-right"></i>
                 <% end %>
               </div>
-              
+
             </div>
           </div>
+
         </div>
       <% end %>
