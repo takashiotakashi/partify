@@ -17,12 +17,15 @@
   height: 100vh;
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
+  // overflow: hidden;
 }
 
-.oi {
+.home-logo{
   display: flex;
   justify-content: center;
   padding: 15%;
+  background-attachment: fixed;
 }
 
 h1 {

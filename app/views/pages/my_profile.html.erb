@@ -18,9 +18,10 @@
   <% end %>
   <span id="description-head">Last access</span>
   <span><%= @user.updated_at.to_time.strftime('%A, %b %d') %></span>
+  <br>
 
-
-
+  <div class="buttons">
+    <div id="back-button sticky-footer" class="flex-shrink-0"><%= link_to "Edit or add info", events_path, class: "btn btn-dark d-flex justify-content-center" %></div>
+    <div id="back-button sticky-footer" class="flex-shrink-0"><%= link_to "Back to events", events_path, class: "btn btn-secondary d-flex justify-content-center" %></div>
+  </div>
 </div>
-<div id="back-button sticky-footer" class="flex-shrink-0"><%= link_to "Edit or add info", events_path, class: "btn btn-dark d-flex justify-content-center" %></div>
-<div id="back-button sticky-footer" class="flex-shrink-0"><%= link_to "Back to events", events_path, class: "btn btn-secondary d-flex justify-content-center" %></div>

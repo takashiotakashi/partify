@@ -1,3 +1,7 @@
 <h1>My Favorites</h1>
 
 <%= render "event_cards", events: @events  %>
+
+<div id="info-show">
+  <div id="back-button"><%= link_to "Back to events", events_path, class: "btn btn-secondary d-flex justify-content-center" %></div>
+</div>
