@@ -1,10 +1,12 @@
-<% if @event.date? %>
-  <div>
-    <%= image_tag(@event.image, id: 'event-show-image') %>
-  </div>
 
-  <div class='card-trip'>
-    <div id="info-show">
+<div>
+  <%= image_tag(@event.image, id: 'event-show-image') %>
+</div>
+
+<div class='card-trip'>
+  <div id="info-show">
+
+    <div class="header-star">
       <h1><%= @event.name.upcase %></h1>
       <div class="favorite-star">
         <% if current_user.favorites.where(event: @event).any? %>
@@ -17,42 +19,22 @@
           <% end %>
         <% end %>
       </div>
+    </div>
+
+    <% if @event.date? %>
       <div id="blacktag"><%= @event.date %></div>
-      <div id="blacktag"><%= @event.address %></div>
-      <div id="description-head"><span>About:</span></div>
-      <div id="description-body"><%= @event.description %></div>
-    </div>
+    <% end %>
+
+    <div id="blacktag"><%= @event.address %></div>
+    <div id="description-head"><span>About:</span></div>
+    <div id="description-body"><%= @event.description %></div>
 
   </div>
 
+</div>
+
+<% if @event.date? %>
   <div><%= link_to "Get tickets", @event.link, target: :_blank, class: "btn btn-dark d-flex justify-content-center" %></div>
-
-<% else %>
-<%# se não tem data, deve ser um estabelecimento %>
-  <div>
-    <%= image_tag(@event.image, id: 'event-show-image') %>
-  </div>
-
-  <div class='card-trip'>
-    <div id="info-show">
-      <h1><%= @event.name.upcase %></h1>
-      <%# talvez inserir tag com estilo? %>
-      <div id="favorite-star">
-        <% if current_user.favorites.where(event: @event).any? %>
-          <%= link_to favorite_path(current_user.favorites.find_by(event_id:@event.id)), data: {turbo_method: :delete} do %>
-            <i class="fas fa-star favorite-star"></i>
-          <% end %>
-          <% else %>
-          <%= link_to event_favorites_path(@event), data: {turbo_method: :post} do %>
-            <i class="far fa-star favorite-star"></i>
-          <% end %>
-        <% end %>
-      </div>
-      <div id="blacktag"><%= @event.address %></div>
-      <div id="description-head"><span>About:</span></div>
-      <div id="description-body"><%= @event.description %></div>
-    </div>
-  </div>
 <% end %>
 
 
