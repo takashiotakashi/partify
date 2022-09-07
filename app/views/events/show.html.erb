@@ -6,14 +6,14 @@
   <div class='card-trip'>
     <div id="info-show">
       <h1><%= @event.name.upcase %></h1>
-      <div>
+      <div class="favorite-star">
         <% if current_user.favorites.where(event: @event).any? %>
           <%= link_to favorite_path(current_user.favorites.find_by(event_id:@event.id)), data: {turbo_method: :delete} do %>
-            <i class="fas fa-star"></i>
+            <i class="fas fa-star favorite-star"></i>
           <% end %>
           <% else %>
           <%= link_to event_favorites_path(@event), data: {turbo_method: :post} do %>
-            <i class="far fa-star"></i>
+            <i class="far fa-star favorite-star"></i>
           <% end %>
         <% end %>
       </div>
@@ -22,7 +22,7 @@
       <div id="description-head"><span>About:</span></div>
       <div id="description-body"><%= @event.description %></div>
     </div>
-      
+
   </div>
 
   <div><%= link_to "Get tickets", @event.link, target: :_blank, class: "btn btn-dark d-flex justify-content-center" %></div>
@@ -37,6 +37,17 @@
     <div id="info-show">
       <h1><%= @event.name.upcase %></h1>
       <%# talvez inserir tag com estilo? %>
+      <div id="favorite-star">
+        <% if current_user.favorites.where(event: @event).any? %>
+          <%= link_to favorite_path(current_user.favorites.find_by(event_id:@event.id)), data: {turbo_method: :delete} do %>
+            <i class="fas fa-star favorite-star"></i>
+          <% end %>
+          <% else %>
+          <%= link_to event_favorites_path(@event), data: {turbo_method: :post} do %>
+            <i class="far fa-star favorite-star"></i>
+          <% end %>
+        <% end %>
+      </div>
       <div id="blacktag"><%= @event.address %></div>
       <div id="description-head"><span>About:</span></div>
       <div id="description-body"><%= @event.description %></div>
