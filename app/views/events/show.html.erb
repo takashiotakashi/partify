@@ -12,11 +12,11 @@
       <%# current_user.favorites.find_by(event_id:@event.id %>
         <% if current_user.favorites.where(event: @event).any? %>
           
-            <i class="fas fa-star favorite-star" data-controller="favorite" data-action="click->favorite#toggle"></i>
+            <i class="fas fa-star favorite-star" data-controller="favorite" data-action="click->favorite#toggle" data-favorite-event-id-value="<%= @event.id %>" data-favorite-user-id-value="<%= current_user.id %>"></i>
           
           <% else %>
           
-            <i class="far fa-star favorite-star" data-controller="favorite"></i>
+            <i class="far fa-star favorite-star" data-controller="favorite" data-action="click->favorite#toggle" data-favorite-event-id-value="<%= @event.id %>" data-favorite-user-id-value="<%= current_user.id %>"></i>
           
         <% end %>
       </div>
