@@ -16,7 +16,7 @@ User.destroy_all
 puts "Db cleaned..."
 puts "Creating genres..."
 
-eventfunk1 = Event.create!(name: "HIGH ✶ É Funk, É Rave, É Revoada na Blitz Haus ✶ Rave Funk, Eletrônico e Muito Mais!",
+Event.create!(name: "HIGH ✶ É Funk, É Rave, É Revoada na Blitz Haus ✶ Rave Funk, Eletrônico e Muito Mais!",
                           date: "Sab, 10 Set - 20:00",
                           description: "A Música Eletrônica e o Funk nunca estiveram tão próximos, a Rave e o Bailão também não, pensando nisso nós criamos a HIGH! Uma festa que vai te levar tão alto que você vai curtir tudo dos dois mundos em uma única festa. Seja você Funk, 150Bpm, do Brazilian Bass, do Trance, do Rave Funk, do que for, se você gosta desses dois mundos, a HIGH é o seu lugar.",
                           address: "Rua Augusta, 657, São Paulo - SP",
@@ -25,7 +25,7 @@ eventfunk1 = Event.create!(name: "HIGH ✶ É Funk, É Rave, É Revoada na Blitz
                           genres: "funk",
                           link: "https://www.sympla.com.br/evento/high-e-funk-e-rave-e-revoada-na-blitz-haus-rave-funk-eletronico-e-muito-mais/1694492")
 
-eventfunk2 = Event.create!(name: "Naza - Sábado com Funk, Rap, Eletro e Pop",
+Event.create!(name: "Naza - Sábado com Funk, Rap, Eletro e Pop",
                           date: "Sab, 24 Set - 22:30",
                           description: "A Naza é uma festa voltada para a exploração de ritmos, nossa missão oficial é enviar nossos tripulantes para a galáxia Andrômeda. Embarque na nossa espaço nave e vem fazer esse rolê intergaláctico!",
                           address: "Rua Augusta, 765, São Paulo",
@@ -34,7 +34,7 @@ eventfunk2 = Event.create!(name: "Naza - Sábado com Funk, Rap, Eletro e Pop",
                           genres: "funk",
                           link: "https://www.sympla.com.br/evento/naza-sabado-com-funk-rap-eletro-e-pop/1701665")
 
-eventfunk3 = Event.create!(name: "Fritação 200! | Open Bar | Funk 200 bpm na Selva!",
+Event.create!(name: "Fritação 200! | Open Bar | Funk 200 bpm na Selva!",
                           date: "Sex, 23 Set - 22:00",
                           description: "Fritando e Sarrando.
                           Em uma Sexta de Open Bar na Selva!
@@ -70,7 +70,7 @@ eventfunk3 = Event.create!(name: "Fritação 200! | Open Bar | Funk 200 bpm na S
                           genres: "funk",
                           link: "https://www.sympla.com.br/evento/fritacao-200-open-bar-funk-200-bpm-na-selva-sexta-23-09/1695229")
 
-eventfunk4 = Event.create!(name: "Noite do Branco com MC Japa",
+Event.create!(name: "Noite do Branco com MC Japa",
                           date: "Sex, 09 Set - 15:00",
                           description: "NOITE DO BRANCO NA FARAH LOUNGE!! Para garantir a verdadeira baguncinha ele, MC JAPA, PERERECA SUICIDA, SE JOGA E QUICA. No comando da pista DJ DON JUAN, com muito funk e HELTON BECKER, com o melhor do sertanejo! Venha de branco e ganhe um drink criado especialmente pra esse evento. Garanta já seu ingresso!! Para reservas de camarote e mais informações, entre em contato conosco (11) 94806-8849.",
                           address: "Rua Aspicuelta, 490, São Paulo - SP",
@@ -78,7 +78,7 @@ eventfunk4 = Event.create!(name: "Noite do Branco com MC Japa",
                           genres: "funk",
                           link: "https://www.sympla.com.br/evento/noite-do-branco-com-mc-japa/1694537")
 
-eventfunk5 = Event.create!(name: "Beyhive Party SP - BDAY",
+Event.create!(name: "Beyhive Party SP - BDAY",
                           date: "Sex, 09 Set - 22:30",
                           description: "Depois do sucesso da última edição em comemoração ao lançamento do Renaissance anunciamos nosso retorno a SÃO PAULO! A BEYHIVE PARTY é a maior festa dedicada para os fãs da cantora Beyoncé no Brasil. Uma experiência única para quem é fã.  E nessa edição estaremos comemorando com um especial BDAY, vocês estão prontos?
                           Atrativos da festa:
@@ -95,7 +95,7 @@ eventfunk5 = Event.create!(name: "Beyhive Party SP - BDAY",
                           genres: "funk",
                           link: "https://www.sympla.com.br/evento/beyhive-party-sp-bday/1688420")
 
-eventrock1 = Event.create!(name: "INDIE PARTY | INDIE - ROCK AND ROLL - EMO - HITS - FOOD PARK E MAIS - COMPRE JÁ",
+Event.create!(name: "INDIE PARTY | INDIE - ROCK AND ROLL - EMO - HITS - FOOD PARK E MAIS - COMPRE JÁ",
                           date: "Sab, 26 Nov - 23:00",
                           description: "Dia 26 de Novembro tem a última INDIE PARTY do ano na AUDIO um dos locais mais incríveis da cidade, com deck ao ar livre, food park e mais. Já convida os amigos pro evento e Compre Ingressos que vai ter muito rock and roll de todas épocas, indie, emo e hits a noite toda!
                           ૪ O QUE OS DJS TOCAM NA FESTA?
@@ -105,7 +105,7 @@ eventrock1 = Event.create!(name: "INDIE PARTY | INDIE - ROCK AND ROLL - EMO - HI
                           genres: "rock",
                           link: "https://www.sympla.com.br/evento/indie-party-indie-rock-and-roll-emo-hits-food-park-e-mais-compre-ja/1684927")
 
-eventrock2 = Event.create!(name: "BANDA EFEITO G8 - o melhor do Rock e Pop Rock no Palco da LEGENDS",
+Event.create!(name: "BANDA EFEITO G8 - o melhor do Rock e Pop Rock no Palco da LEGENDS",
                           date: "Sab, 10 Set - 21:00",
                           description: "Novamente a Banda Efeito G8 vai agitar a LEGENDS tocando os maiores sucessos do rock e pop rock.
                           O importante é se divertir, estreitar relações e fazer amigos novos!!!!
@@ -115,7 +115,7 @@ eventrock2 = Event.create!(name: "BANDA EFEITO G8 - o melhor do Rock e Pop Rock 
                           genres: "rock",
                           link: "https://www.sympla.com.br/evento/banda-efeito-g8-o-melhor-do-rock-e-pop-rock-no-palco-da-legends/1697684")
 
-eventrock3 = Event.create!(name: "BITE ME - SEXTA POP, ROCK, HITS PINK LAB",
+Event.create!(name: "BITE ME - SEXTA POP, ROCK, HITS PINK LAB",
                           date: "Sex, 09 Set - 22:00",
                           description: "BITE ME ✦ 09/09 - SEXTA ✦  POP, ROCK, HITS ✦ PINK LAB
 
@@ -150,7 +150,7 @@ eventrock3 = Event.create!(name: "BITE ME - SEXTA POP, ROCK, HITS PINK LAB",
                           genres: "rock",
                           link: "https://www.sympla.com.br/evento/bite-me-09-09-sexta-pop-rock-hits-pink-lab/1692833")
 
-eventrock4 = Event.create!(name: "Rock Collection e Mach 5",
+Event.create!(name: "Rock Collection e Mach 5",
                           date: "Sex, 09 Set - 17:00",
                           description: "A Banda Mach 5 é uma banda que surgiu na união  de nomes experientes da noite de São Paulo, um projeto que já nasce grande, tocando nas melhores casas da cidade.
 
@@ -168,7 +168,7 @@ eventrock4 = Event.create!(name: "Rock Collection e Mach 5",
                           genres: "rock",
                           link: "https://www.sympla.com.br/evento/rock-collection-e-mach-5/1703113")
 
-emetal2 = Event.create!(name: "Show de Temporada História do Rock Parte 2 - School of Rock Brooklin-Campo Belo",
+Event.create!(name: "Show de Temporada História do Rock Parte 2 - School of Rock Brooklin-Campo Belo",
                           date: "Dom, 25 Set - 12:00",
                           description: "O Show de Temporada da School of Rock Brooklin-Campo Belo, História do Rock - Parte 2: Rock 50's, Progressivo, Grunge e Indie, acontecerá no dia 25 de Setembro, em uma das mais novas e já prestigiadas casas de show de SP, o Legends Music Bar, na Vila Madalena.
                           O line-up das bandas e horários será disponibilizado na escola.
@@ -241,7 +241,7 @@ Event.new(
   description: "Bar com palco amplo para bandas de rock, vários espaços, mezanino e sala de jogos."
 ).save
 
-eventmetal1 = Event.create!(name: "ARCH ENEMY / BEHEMOTH EM SÃO PAULO",
+Event.create!(name: "ARCH ENEMY / BEHEMOTH EM SÃO PAULO",
                           date: "Dom, 13 Nov - 18:00",
                           description: "ARCH ENEMY / BEHEMOTH 'THE LATIN AMERICAN SIEGE' 2022 EM SÃO PAULO
 
@@ -263,7 +263,7 @@ eventmetal1 = Event.create!(name: "ARCH ENEMY / BEHEMOTH EM SÃO PAULO",
                           genres: "metal",
                           link: "https://www.clubedoingresso.com/evento/archenemy-behemoth-sp")
 
-eventmetal2 = Event.create!(name: "DESTRUCTION E BURNING WITCHES EM SÃO PAULO",
+Event.create!(name: "DESTRUCTION E BURNING WITCHES EM SÃO PAULO",
                           date: "Dom, 18 Set - 18:00",
                           description: "Após anos de espera, os lendários veteranos do thrash alemão, DESTRUCTION, retornarão ao Brasil para uma série de quatros shows que farão parte da turnê latino-americana que celebrará os 40 anos da banda e promoverá o seu incendiário novo álbum, 'Diabolical', lançado em abril de 2022, pela Napalm Records. Além da artilharia pesada desencadeada em seu novo lançamento, não faltarão os inúmeros clássicos do Destruction, cristalizados na história do thrash metal mundial.
 
@@ -273,7 +273,7 @@ eventmetal2 = Event.create!(name: "DESTRUCTION E BURNING WITCHES EM SÃO PAULO",
                           genres: "metal",
                           link: "https://www.clubedoingresso.com/evento/destruction-sp")
 
-eventmetal3 = Event.create!(name: "METAL RELICS FESTIVAL",
+Event.create!(name: "METAL RELICS FESTIVAL",
                           date: "Sab, 19 Nov - 18:30",
                           description: "A gravadora Metal Relics tem o orgulho em anunciar o primeiro Metal Relics Festival, um festival apenas com bandas brasileiras, que acontecerá no dia 19 de novembro de 2022, no Legends Music Bar, em São Paulo, a partir das 18h30. O festival marca o retorno da lendária banda Wizards aos palcos após 11 anos, além da estreia da banda Caravellus com a nova formação em SP. Outro grande nome do evento é o Aquaria, que se apresenta ao vivo depois de muito tempo. Para completar o line-up, as bandas Living Metal (com participação de Yara Häag) e XFears (com participação de Ciça Moreira) se apresentam mostrando a renovação da cena brasileira.",
                           address: "Rua Inácio Pereira da Rocha, 367, São Paulo - SP",
@@ -281,7 +281,7 @@ eventmetal3 = Event.create!(name: "METAL RELICS FESTIVAL",
                           genres: "metal",
                           link: "https://www.sympla.com.br/evento/metal-relics-festival/1596891?lang=PT")
 
-eventmetal4 = Event.create!(name: "Trovão - Creatures - Inluzt - Biter - Sweet Danger",
+Event.create!(name: "Trovão - Creatures - Inluzt - Biter - Sweet Danger",
                           date: "Dom, 11 Dez - 16:00",
                           description: "Caveira Velha Produções e Metal Daze Apresentam:
 
@@ -300,7 +300,7 @@ eventmetal4 = Event.create!(name: "Trovão - Creatures - Inluzt - Biter - Sweet 
                           genres: "metal",
                           link: "https://www.sympla.com.br/evento/trovao-creatures-inluzt-biter-sweet-danger/1611845")
 
-eventmetal5 = Event.create!(name: "WEIGHT OF EMPTINESS (CHILE) + CRUCIFIXION BR + LES MÉMOIRES FALL EM SÃO PAULO",
+Event.create!(name: "WEIGHT OF EMPTINESS (CHILE) + CRUCIFIXION BR + LES MÉMOIRES FALL EM SÃO PAULO",
                           date: "Sex, 23 Set - 19:00",
                           description: "UM EVENTO IMPERDÍVEL!
 
