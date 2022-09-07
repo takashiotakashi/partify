@@ -316,4 +316,104 @@ eventmetal5 = Event.create!(name: "WEIGHT OF EMPTINESS (CHILE) + CRUCIFIXION BR 
                           genres: "metal",
                           link: "https://www.sympla.com.br/evento/weight-of-emptiness-chile-crucifixion-br-les-memoires-fall-em-sao-paulo/1671835")
 
+Event.create!(
+  name: "A Obra",
+  description: "A Obra Bar Dançante é uma casa noturna localizada em Belo Horizonte.
+  Bandas alternativas, independentes e autorais dividem a semana com os melhores dj's da cidade.
+  Tem rock, pop, black, rap, soul, eletro, 80's, brega.
+  Tem gente interessante e inteligente.
+  Tem mais de 80 rótulos de cervejas nacionais e importadas.
+  Vem!
+  Programação básica:
+  Quartas e quintas: shows com as melhores bandas independentes da cena alternativa da BH e do Brasil.
+  Sexta e sábados: festas para todos os gostos e estilos, comandadas por alguns dos melhores dj's da cidade.",
+  address: "Rua Rio Grande Do Norte 1168, Belo Horizonte, MG, Brazil",
+  image: "https://res.cloudinary.com/dkearav60/image/upload/v1662577239/estabelecimentos/aobra.png",
+  genres: "rock"
+)
+
+Event.create!(
+  name: "Deputamadre Club",
+  description: "Referência na noite de Belo Horizonte, o Deputamadre se destaca por ter um público fiel que compõe a cena eletrônica local, a programação e feita com os principais djs nacionais e internacionais, pela idéia de educar e respeitar o que já foi e vem sendo feito na cena eletrônica mineira, pela renovação, identidade visual e principalmente, pela atitude de pessoas que fazem do Deputamadre um club sem frescura, GRACIAS!",
+  address: "Av Contorno 2028, Belo Horizonte, MG, Brazil",
+  image: "https://res.cloudinary.com/dkearav60/image/upload/v1662577428/estabelecimentos/deputa.jpg",
+  genres: "electronica"
+)
+
+Event.create!(
+  name: "Jack Rock Bar",
+  description: "Referência no cenário rock de Belo Horizonte desde 2003, o Jack Rock Bar encarna o rock n’ roll em toda a sua estrutura e trajetória. O nome foi inspirado no clássico “The Jack”, da banda australiana AC/DC e o ambiente é totalmente estilizado de forma a transportar o público para uma atmosfera genuinamente rock n’ roll. O palco da casa recebe, de quarta a domingo, grandes shows em homenagem aos maiores mestres do rock em todos os tempos. O Jack foi eleito pela revista VEJA BH – publicação especializada na vida noturna da capital mineira – como a casa de “Melhor Música Ao Vivo” da cidade em 2011 e 2012. Em 2014, recebeu o Prêmio Encontro Gastrô, promovido pela Revista Encontro, na categoria “Melhor Casa para Paquerar em BH”.
+  A casa possui sinuca, Sushi Lounge, ar condicionado, TV em todos os ambientes e telão no salão principal, onde acontecem os shows. Total acessibilidade para portadores de deficiência física.",
+  address: "Av. do Contorno, 5623, Belo Horizonte, MG, Brazil",
+  image: "https://res.cloudinary.com/dkearav60/image/upload/v1662577613/estabelecimentos/jack.jpg",
+  genres: "rock"
+)
+
+Event.create!(
+  name: "XBK",
+  description: "Xtreme Barbecue Kings. Beer garden com shows todas as semanas.",
+  address: "Rua Vitório Marçola, 184, Belo Horizonte, MG, Brazil",
+  image: "https://res.cloudinary.com/dkearav60/image/upload/v1662577804/estabelecimentos/xbk.jpg",
+  genres: "rock"
+)
+
+Event.create!(
+  name: "ROCK DO MERCADO - 7HS OPEN BAR",
+  description: "
+  O melhor ROCK da CIDADE!
+
+  SERÃO 7 (SETE) HORAS
+
+  OPEN BAR
+
+  Chegou a hora de apreciar
+  7 horas da melhor cerveja.
+
+  CERVEJA HEINEKEN
+
+  GINGIBRE (DRINK COM GIN)
+
+  REFRIGERANTE
+
+  ÁGUA
+
+  SUCOS
+
+
+  OPEN BAR DE HEINEKEN
+
+  O quê ??? OPEN BAR DE HEINEKEN ???
+
+  Isso mesmo, OPEN BAR DE HEINEKEN !!!
+
+  Vamos celebrar a vida, com muuuuita cerveja, música e dança!
+  Além disso, tem um monte de coisas boas pra te animar mais ainda:
+
+
+  ATRAÇÕES
+
+  LUREX
+
+  FOLK
+
+  LOCOMOTIVE
+
+  DJ SEU MUNIZ
+
+
+
+  Festa totalmente 100% a prova dágua !
+  Estacionamento GRATUITO
+  Espaço gastronômico Mercado do Cruzeiro
+
+  Mas vou te contar um segredinho, corre lá que os ingressos estão com aquele precinho super camarada e vão acabar rapidinho !
+
+  Pra ingressos ou mais informações liga pra gente no 3284-0709 ou wpp: (31) 9 8701-7000",
+  address: "Rua Opala, 97, Belo Horizonte, MG, Brazil",
+  image: "https://res.cloudinary.com/dkearav60/image/upload/v1662578140/estabelecimentos/mercado.png",
+  genres: "rock"
+)
+
+
+
 puts "#{Event.count} events created"
