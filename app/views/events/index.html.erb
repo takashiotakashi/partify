@@ -19,8 +19,24 @@
               <div class='img-event'> <%= image_tag "#{event.image}", class: "w-100" %></div>
             <% end %>
             <div class="card-event-info">
-              <div class="stripe-2">
-                <h1 class="mb-2"><%= event.name %></h1>
+              <div>
+
+                <div class="header-star">
+                  <h1 class="mb-2"><%= event.name %></h1>
+                  <div class="favorite-star">
+                    <% if current_user.favorites.where(event: event).any? %>
+                      <%= link_to favorite_path(current_user.favorites.find_by(event_id:event.id)), data: {turbo_method: :delete} do %>
+                        <i class="fas fa-star favorite-star"></i>
+                      <% end %>
+                      <% else %>
+                      <%= link_to event_favorites_path(event), data: {turbo_method: :post} do %>
+                        <i class="far fa-star favorite-star"></i>
+                      <% end %>
+                    <% end %>
+                  </div>
+                </div>
+
+
                 <%# <h1 class="mb-2"><i class="fa-solid fa-map-pin me-2"></i><%= event.name %>
                 <% if event.date? %>
                   <h6><i class="fa-solid fa-calendar-days me-2"></i><%= event.date %></h6>
