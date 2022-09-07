@@ -23,6 +23,11 @@ class EventsController < ApplicationController
     set_event
   end
 
+  def my_favorites
+    my_favorites = Favorite.includes(:event).where(user: current_user)
+    @events = my_favorites.map{ |favorite| favorite.event}
+  end
+
   def new
     @event = Event.new
   end
