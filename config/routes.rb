@@ -7,7 +7,11 @@ Rails.application.routes.draw do
   # get '/users/auth/callback', to: 'callbacks#spotify'
 
   root to: "events#index"
-  resources :events, only: %i[index show]
+  resources :events, only: %i[index show] do
+    resources :favorites, only: %i[create]
+  end
+  resources :favorites, only: :destroy
+  
   resources :profiles, only: %i[new create]
   get "home", to: "pages#home"
   get "my_profile", to: "pages#my_profile"
