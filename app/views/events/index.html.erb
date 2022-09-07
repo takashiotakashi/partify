@@ -18,11 +18,13 @@
             <%= link_to event_path(event) do %>
               <div class='img-event'> <%= image_tag "#{event.image}", class: "w-100" %></div>
             <% end %>
+
             <div class="card-event-info">
               <div>
 
                 <div class="header-star">
                   <h1 class="mb-2"><%= event.name %></h1>
+
                   <div class="favorite-star">
                     <% if current_user.favorites.where(event: event).any? %>
                       <%= link_to favorite_path(current_user.favorites.find_by(event_id:event.id)), data: {turbo_method: :delete} do %>
@@ -34,6 +36,7 @@
                       <% end %>
                     <% end %>
                   </div>
+
                 </div>
 
 
@@ -45,6 +48,7 @@
                   See details <i class="fa-solid fa-arrow-right"></i>
                 <% end %>
               </div>
+              
             </div>
           </div>
         </div>
