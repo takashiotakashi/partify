@@ -15,3 +15,6 @@ application.register("map", MapController)
 
 import UserLocationController from "./user_location_controller"
 application.register("user-location", UserLocationController)
+
+import FavoriteController from "./favorite_controller"
+application.register("favorite", FavoriteController )

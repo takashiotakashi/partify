@@ -3,7 +3,7 @@ class FavoritesController < ApplicationController
   def create
     @event = Event.find(params[:event_id])
     return if current_user.favorites.find_by(id: @event.id)
-
+    
     favorite = Favorite.new
     favorite.event = @event
     favorite.user = current_user
