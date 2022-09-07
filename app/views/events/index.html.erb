@@ -10,5 +10,11 @@
   <h2 class="stripe-1">Near you...</h2>
 </div>
 <%# temporario para apresentacao %>
+<% if @events %>
+  <%= render "no_events" %>
+  <%#= render "event_cards", events: @events  %>
 
-<%= render "event_cards", events: @events  %>
+<% else %>
+
+  <%= render "no_events" %>
+<% end %>
