@@ -10,7 +10,7 @@
         <i class="fa-brands fa-spotify" id="logo"></i>
         <%- if devise_mapping.omniauthable? %>
           <%- resource_class.omniauth_providers.each do |provider| %>
-            <%= button_to "Sign in with #{OmniAuth::Utils.camelize(provider)}", omniauth_authorize_path(resource_name, provider), data: {turbo: false}, id: 'spotify' %>
+            <%= button_to "Sign in with #{OmniAuth::Utils.camelize(provider)}", omniauth_authorize_path(resource_name, provider, show_dialog: true), data: {turbo: false}, id: 'spotify' %>
           <% end %>
         <% end %>
       </div>
