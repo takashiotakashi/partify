@@ -2,7 +2,8 @@
 <div class="events-map"
   data-controller="map user-location"
   data-map-markers-value="<%= @markers.to_json %>"
-  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
+  data-map-user-marker-value="<%= @user_marker.to_json %>"  >
 </div>
 
 <div class="module">
