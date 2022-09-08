@@ -15,7 +15,10 @@ export default class extends Controller {
   success = (pos) => {
     const crd = pos.coords;
 
+    if (window.localStorage.getItem("user_location_redirect")) return
+
     if (!window.location.href.includes("?lat=")) {
+      window.localStorage.setItem("user_location_redirect","true")
       window.location.replace(window.location.href + `?lat=${crd.latitude}&lng=${crd.longitude}`)
     }
 

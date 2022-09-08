@@ -1,9 +1,20 @@
-<h1>MY LOCATION</h1>
 
-<%= simple_form_for @profile, url: profiles_path, method: :post, data: { turbo: :false } do |f| %>
+<div class="profile-container">
+  <h1>Set a location to search</h1>
 
-<%= request.location.city %>
-<%= f.input :address %>
-<%= f.submit 'Search locals', class: 'btn btn-primary btn-block' %>
+</div>
 
-<% end %>
+
+<div class="details">
+  <br>
+  <div class="buttons">
+    <%= simple_form_for @profile, url: profiles_path, method: :post, data: { turbo: :false } do |f| %>
+
+      <%= request.location.city %>
+      <%= f.input :address, label: false %>
+      <%= f.submit 'Go!', class: 'w-100 btn btn-dark d-flex justify-content-center', id: 'back-button sticky-footer' %>
+
+    <% end %>
+    <div id="back-button sticky-footer" class="flex-shrink-0"><%= link_to "Back to events", events_path, class: "btn btn-secondary d-flex justify-content-center" %></div>
+  </div>
+</div>
