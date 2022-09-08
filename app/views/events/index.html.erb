@@ -10,8 +10,12 @@
   <h2 class="stripe-1">Near you</h2>
 </div>
 
-<% if @events.present? %>
-  <%= render "event_cards", events: @events  %>
-<% else %>
-  <%= render "no_events" %>
-<% end %>
+<%= render "event_cards", events: @events  %>
+
+<%# code below suppressed temporarily %>
+
+<%# if @events.present? %>
+  <%#= render "event_cards", events: @events  %>
+<%# else %>
+  <%#= render "no_events" %>
+<%# end %>
