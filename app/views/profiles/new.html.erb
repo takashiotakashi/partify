@@ -10,7 +10,7 @@
   <div class="buttons">
     <%= simple_form_for @profile, url: profiles_path, method: :post, data: { turbo: :false } do |f| %>
 
-      <%= request.location.city %>
+      <% request.location.city %>
       <%= f.input :address, label: false %>
       <%= f.submit 'Go!', class: 'w-100 btn btn-dark d-flex justify-content-center', id: 'back-button sticky-footer' %>
 
