@@ -8,17 +8,17 @@ export default class extends Controller {
 
   options = {
     enableHighAccuracy: true,
-    timeout: 5000,
     maximumAge: 0
   };
 
   success = (pos) => {
+    console.log("user_location_redirectsdoifjsiodj")
     const crd = pos.coords;
 
-    if (window.localStorage.getItem("user_location_redirect")) return
+    if (window.location.href.includes("address")) return
 
     if (!window.location.href.includes("?lat=")) {
-      window.localStorage.setItem("user_location_redirect","true")
+      // window.localStorage.setItem("user_location_redirect","true")
       window.location.replace(window.location.href + `?lat=${crd.latitude}&lng=${crd.longitude}`)
     }
 
