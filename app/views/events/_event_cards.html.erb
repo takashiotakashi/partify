@@ -25,11 +25,10 @@
 
                 </div>
 
+                  <% if event.date? %>
+                    <h6><i class="fa-solid fa-calendar-days me-2"></i><%= event.date %></h6>
+                  <% end %>
 
-                <%# <h1 class="mb-2"><i class="fa-solid fa-map-pin me-2"></i><%= event.name %>
-                <% if event.date? %>
-                  <h6><i class="fa-solid fa-calendar-days me-2"></i><%= event.date %></h6>
-                <% end %>
                 <%= link_to event_path(event), class: "btn-event" do %>
                   See details <i class="fa-solid fa-arrow-right"></i>
                 <% end %>
