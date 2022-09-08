@@ -15,7 +15,8 @@ class EventsController < ApplicationController
         {
           lat: event.latitude,
           lng: event.longitude,
-          info_window: render_to_string(partial: "info_window", locals: { event: event })
+          info_window: render_to_string(partial: "info_window", locals: { event: event }),
+          image_url: helpers.asset_url("marker.png")
         }
       end
     end
@@ -23,7 +24,8 @@ class EventsController < ApplicationController
     @user_marker = {
       lat: @user_location.first,
       lng: @user_location.last,
-      image_url: helpers.asset_url("usermarker.png")
+      image_url: helpers.asset_url("you_marker.png")
+
       } if @user_location
 
   end
