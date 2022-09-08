@@ -11,7 +11,7 @@
 puts "Cleaning db..."
 
 Event.destroy_all
-User.destroy_all
+# User.destroy_all
 
 puts "Db cleaned..."
 puts "Creating genres..."
@@ -211,6 +211,7 @@ Event.create!(name: "Show de Temporada História do Rock Parte 2 - School of Roc
 
 Event.create!(
   name: "Milo Garage",
+  date: "tue - sat",
   image: "https://res.cloudinary.com/dkearav60/image/upload/c_scale,w_884/v1662415481/estabelecimentos/milo_garage.png",
   genres: "rock",
   address: "Av. Pompéia, 1681 - Pompeia, São Paulo - SP",
@@ -219,6 +220,7 @@ Event.create!(
 
 Event.new(
   name: "Beco 203",
+  date: "wed - sun",
   image: "https://res.cloudinary.com/dkearav60/image/upload/v1662415483/estabelecimentos/beco_203.png",
   genres: "rock",
   address: "R. Augusta, 609 - Consolação, São Paulo - SP",
@@ -227,6 +229,7 @@ Event.new(
 
 Event.new(
   name: "Morrison Rock Bar",
+  date: "wed - sun",
   image: "https://res.cloudinary.com/dkearav60/image/upload/c_scale,w_1710/v1662416021/estabelecimentos/morrison.png",
   genres: "rock",
   address: "R. Fidalga, 531 - Pinheiros, São Paulo - SP",
@@ -235,6 +238,7 @@ Event.new(
 
 Event.new(
   name: "Manifesto Bar",
+  date: "tue - sat",
   image: "https://res.cloudinary.com/dkearav60/image/upload/c_scale,w_1339/v1662415950/estabelecimentos/manifesto.png",
   genres: "rock",
   address: "R. Iguatemi, 36 - Itaim Bibi, São Paulo - SP",
@@ -318,6 +322,7 @@ Event.create!(name: "WEIGHT OF EMPTINESS (CHILE) + CRUCIFIXION BR + LES MÉMOIRE
 
 Event.create!(
   name: "A Obra",
+  date: "wed - sun",
   description: "A Obra Bar Dançante é uma casa noturna localizada em Belo Horizonte.
   Bandas alternativas, independentes e autorais dividem a semana com os melhores dj's da cidade.
   Tem rock, pop, black, rap, soul, eletro, 80's, brega.
@@ -334,6 +339,7 @@ Event.create!(
 
 Event.create!(
   name: "Deputamadre Club",
+  date: "wed - sat",
   description: "Referência na noite de Belo Horizonte, o Deputamadre se destaca por ter um público fiel que compõe a cena eletrônica local, a programação e feita com os principais djs nacionais e internacionais, pela idéia de educar e respeitar o que já foi e vem sendo feito na cena eletrônica mineira, pela renovação, identidade visual e principalmente, pela atitude de pessoas que fazem do Deputamadre um club sem frescura, GRACIAS!",
   address: "Av Contorno 2028, Belo Horizonte, MG, Brazil",
   image: "https://res.cloudinary.com/dkearav60/image/upload/v1662577428/estabelecimentos/deputa.jpg",
@@ -342,6 +348,7 @@ Event.create!(
 
 Event.create!(
   name: "Jack Rock Bar",
+  date: "tue - sun",
   description: "Referência no cenário rock de Belo Horizonte desde 2003, o Jack Rock Bar encarna o rock n’ roll em toda a sua estrutura e trajetória. O nome foi inspirado no clássico “The Jack”, da banda australiana AC/DC e o ambiente é totalmente estilizado de forma a transportar o público para uma atmosfera genuinamente rock n’ roll. O palco da casa recebe, de quarta a domingo, grandes shows em homenagem aos maiores mestres do rock em todos os tempos. O Jack foi eleito pela revista VEJA BH – publicação especializada na vida noturna da capital mineira – como a casa de “Melhor Música Ao Vivo” da cidade em 2011 e 2012. Em 2014, recebeu o Prêmio Encontro Gastrô, promovido pela Revista Encontro, na categoria “Melhor Casa para Paquerar em BH”.
   A casa possui sinuca, Sushi Lounge, ar condicionado, TV em todos os ambientes e telão no salão principal, onde acontecem os shows. Total acessibilidade para portadores de deficiência física.",
   address: "Av. do Contorno, 5623, Belo Horizonte, MG, Brazil",
@@ -351,6 +358,7 @@ Event.create!(
 
 Event.create!(
   name: "XBK",
+  date: "tue - sun",
   description: "Xtreme Barbecue Kings. Beer garden com shows todas as semanas.",
   address: "Rua Vitório Marçola, 184, Belo Horizonte, MG, Brazil",
   image: "https://res.cloudinary.com/dkearav60/image/upload/v1662577804/estabelecimentos/xbk.jpg",
@@ -359,6 +367,7 @@ Event.create!(
 
 Event.create!(
   name: "ROCK DO MERCADO - 7HS OPEN BAR",
+  date: "10 set - 2022 • 19:30",
   description: "
   O melhor ROCK da CIDADE!
 

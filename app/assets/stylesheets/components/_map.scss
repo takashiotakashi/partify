@@ -1,12 +1,10 @@
 .events-map {
   width: 100%;
   height: 250px;
-  overflow: visible;
 }
 
 .mapboxgl-popup {
   max-width: 50px;
-
 }
 
 .mapboxgl-popup-content {
@@ -22,4 +20,8 @@
   strong {
     font-size: 14px;
   }
+}
+
+.marker {
+  background-repeat: no-repeat;
 }
