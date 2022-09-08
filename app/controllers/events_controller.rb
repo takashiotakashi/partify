@@ -4,9 +4,11 @@ class EventsController < ApplicationController
 
     @events = Event.where(genres: current_user.fav_genre)
 
-    @events = @events.near([current_user.latitude, current_user.longitude], 10) if params[:address] == "user"
+    @user_location = [current_user.latitude, current_user.longitude] if params[:address] == "user"
 
-    @events = @events.near([params[:lat], params[:lng]], 10) if params[:lat].present? && params[:lng].present?
+    @user_location = [params[:lat], params[:lng]] if params[:lat].present? && params[:lng].present?
+
+    @events = @events.near(@user_location, 10)
 
     if @events.present?
       @markers = @events.geocoded.map do |event|
@@ -17,6 +19,13 @@ class EventsController < ApplicationController
         }
       end
     end
+
+    @user_marker = {
+      lat: @user_location.first,
+      lng: @user_location.last,
+      image_url: helpers.asset_url("usermarker.png")
+      } if @user_location
+
   end
 
   def show

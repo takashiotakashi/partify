@@ -4,7 +4,8 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
   static values = {
     apiKey: String,
-    markers: Array
+    markers: Array,
+    userMarker: Object
   }
 
   connect() {
@@ -29,6 +30,17 @@ export default class extends Controller {
         .setPopup(popup)
         .addTo(this.map)
     })
+
+    const customMarker = document.createElement("div")
+    customMarker.className = "marker"
+    customMarker.style.backgroundImage = `url('${this.userMarkerValue.image_url}')`
+    customMarker.style.backgroundSize = "contain"
+    customMarker.style.width = "35px"
+    customMarker.style.height = "35px"
+
+    new mapboxgl.Marker(customMarker)
+      .setLngLat([ this.userMarkerValue.lng, this.userMarkerValue.lat ])
+      .addTo(this.map)
   }
 
   #fitMapToMarkers() {
