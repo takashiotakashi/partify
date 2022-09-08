@@ -414,6 +414,4 @@ Event.create!(
   genres: "rock"
 )
 
-
-
 puts "#{Event.count} events created"
