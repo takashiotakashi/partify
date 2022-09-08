@@ -13,5 +13,8 @@
   },
   "scripts": {
     "build": "webpack --config webpack.config.js"
+  },
+  "devDependencies": {
+    "mini-css-extract-plugin": "^2.6.1"
   }
 }
