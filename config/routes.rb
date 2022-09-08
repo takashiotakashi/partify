@@ -11,11 +11,12 @@ Rails.application.routes.draw do
     resources :favorites, only: %i[create]
   end
   resources :favorites, only: :destroy
-  
+
   resources :profiles, only: %i[new create]
   get "home", to: "pages#home"
   get "my_profile", to: "pages#my_profile"
   get "my_favorites", to: "events#my_favorites"
+  get "help", to: "pages#help"
   resources :my_music_taste, only: :index
 
 
