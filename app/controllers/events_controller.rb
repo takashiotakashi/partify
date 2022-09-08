@@ -19,6 +19,8 @@ class EventsController < ApplicationController
           image_url: helpers.asset_url("marker.png")
         }
       end
+    else
+      @markers = []
     end
 
     @user_marker = {
