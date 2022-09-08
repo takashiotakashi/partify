@@ -18,6 +18,8 @@ class EventsController < ApplicationController
           info_window: render_to_string(partial: "info_window", locals: { event: event })
         }
       end
+    else
+      @markers = []
     end
 
     @user_marker = {
