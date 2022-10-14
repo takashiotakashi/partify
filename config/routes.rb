@@ -2,7 +2,6 @@ Rails.application.routes.draw do
 
   devise_for :users,
              controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
-
   # devise_for :users, controllers: { omniauth_callbacks: 'callbacks' }
   # get '/users/auth/callback', to: 'callbacks#spotify'
 
@@ -18,7 +17,6 @@ Rails.application.routes.draw do
   get "my_favorites", to: "events#my_favorites"
   get "help", to: "pages#help"
   resources :my_music_taste, only: :index
-
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   # Defines the root path route ("/")
